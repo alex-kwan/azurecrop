@@ -1,0 +1,4 @@
+azurecrop
+=========
+
+My test application
