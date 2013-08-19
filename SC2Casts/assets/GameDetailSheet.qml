@@ -2,7 +2,7 @@ import bb.cascades 1.0
 
 
 Page {
-    property alias nav : carousel.nav
+    property alias nav : matchList.nav
    
     titleBar: TitleBar {
         title: "Test"
@@ -16,8 +16,8 @@ Page {
        		 }
 
         background: Color.Black
-        GameCarousel{
-            id: carousel
+        MatchList{
+            id: matchList
             horizontalAlignment: HorizontalAlignment.Center
 
         }
