@@ -1,11 +1,12 @@
 1
-36
+37
 0.jpg
 2.jpg
 720x720/AppBackground.qml
 720x720/AppOrientationHandler.qml
 720x720/images/background.png
 AppBackground.qml
+AppCover.qml
 AppOrientationHandler.qml
 CustomListItemLayout.qml
 GameCarousel.qml
