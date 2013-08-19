@@ -8,32 +8,18 @@ Container {
     layout: DockLayout {
     	
     }
-
-   // background: Color.create("#ff59ffff")
-    maxWidth: 300
-  //  maxHeight: 100
-    leftMargin: 210.0
-    leftPadding: -30
-    rightPadding: -30
-    topPadding: -30
-    bottomPadding: -30
+    
+   
     ImageView {
         id :raceOne
-        imageSource: "asset:///images/protoss-icon.png"
-        scaleX: 0.6
-        scaleY: 0.6
+        imageSource: "asset:///images/zerg-icon.png"
+    
         horizontalAlignment: HorizontalAlignment.Left
-        //verticalAlignment: VerticalAlignment.Center
-        
-
     }
     ImageView {
         id : raceTwo
-        imageSource: "asset:///images/protoss-icon.png"
-        scaleX: 0.6
-        scaleY: 0.6
+        imageSource: "asset:///images/terran-icon.png"
         horizontalAlignment: HorizontalAlignment.Right
-       // verticalAlignment: VerticalAlignment.Center
     }
     
     onRace1Changed : {
@@ -43,6 +29,11 @@ Container {
     onRace2Changed : {
         raceTwo.imageSource = getImage(race2);
     }
+
+    maxHeight: 200
+    maxWidth: 385
+    
+    background: Color.White
     
     function getImage(str){
         var image = "";

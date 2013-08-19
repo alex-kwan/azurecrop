@@ -1,5 +1,5 @@
 1
-40
+36
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -7,9 +7,7 @@
 720x720/images/background.png
 AppBackground.qml
 AppOrientationHandler.qml
-CustomCheckBox.qml
 CustomListItemLayout.qml
-FadingButton.qml
 GameCarousel.qml
 GameDescription.qml
 GameDetailSheet.qml
@@ -31,12 +29,10 @@ images/test2.jpg
 images/whitedog.png
 images/zerg-icon.png
 main.qml
-Match.qml
 models/items.xml
 models/items2.xml
 models/recentgames.xml
 models/topgamedescriptions.xml
 models/topgames.xml
-MovingImage.qml
 Round.qml
 Versus.qml
