@@ -1,5 +1,5 @@
 1
-37
+38
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -10,6 +10,7 @@ AppCover.qml
 AppOrientationHandler.qml
 CustomListItemLayout.qml
 GameCarousel.qml
+GameCarouselExperimental.qml
 GameDescription.qml
 GameDetailSheet.qml
 GameListScreen.qml
