@@ -24,9 +24,20 @@ ListView {
     listItemComponents: [
         ListItemComponent {
             type: "header"
-            Label {
-                text: ListItemData.title
+            Container{
+                minWidth: 1280
+                maxWidth: 1280.0
+                background: Color.Black
+                Label {
+                    text: ListItemData.title
+                    textStyle.color: Color.White
+                    textStyle.fontSize: FontSize.XXLarge
+                    textStyle.fontWeight: FontWeight.Bold
+                    textStyle.fontStyle: FontStyle.Normal
+                   
+                }
             }
+          
         }
         ,
         ListItemComponent {
@@ -53,6 +64,7 @@ ListView {
                         }
                     }
                 ]
+                
             }
         } // end of second ListItemComponent]
     ]

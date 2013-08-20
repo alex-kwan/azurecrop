@@ -7,12 +7,9 @@ import bb.system 1.0
 	    Menu.definition: menu
 	    id : nav
 	    Page {
-        titleBar: TitleBar {
-            title: "Test"
-            visibility: ChromeVisibility.Visible
-           
-        }
+      
         GamesList{
+            id:gamelist
             nav : nav
 
         }
@@ -28,6 +25,7 @@ import bb.system 1.0
           
             // Create the app menu for the cookbook.
             menu = sc2castmenu.createObject();
+            menu.gamelist = gamelist
         }
 
     }

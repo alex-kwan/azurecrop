@@ -1,5 +1,5 @@
 1
-42
+43
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -36,6 +36,7 @@ models/<root>.xml
 models/items.xml
 models/items2.xml
 models/match.xml
+models/recentgamedescriptions.xml
 models/recentgames.xml
 models/topgamedescriptions.xml
 models/topgames.xml

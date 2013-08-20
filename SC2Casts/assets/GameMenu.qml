@@ -2,6 +2,8 @@ import bb.cascades 1.0
 import bb.system 1.0
 
 MenuDefinition {
+    
+    property GamesList gamelist 
     settingsAction: SettingsActionItem {
         onTriggered: {
             toast.body = "Settings"
@@ -19,16 +21,18 @@ MenuDefinition {
             title: "Top Games"
            // imageSource: "asset:///images/salt_icon.png"
             onTriggered: {
-                toast.body = "Top Games"
-                toast.show();
+                //gamelist.resetDataModel();
+            gamelist.data = "asset:///models/topgamedescriptions.xml";
+            
             }
         },
         ActionItem {
             title: "Recent Games"
             // imageSource: "asset:///images/salt_icon.png"
             onTriggered: {
-                toast.body = "Recent Games"
-                toast.show();
+             //   gamelist.resetDataModel();
+                gamelist.data = "asset:///models/recentgamedescriptions.xml";
+                
             }
         }
     ]

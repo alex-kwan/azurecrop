@@ -41,6 +41,7 @@ Container{
             horizontalAlignment: HorizontalAlignment.Right
             verticalAlignment: VerticalAlignment.Top
             preferredWidth: 300.0
+            translationY: 0.0
 
         }
         
@@ -57,21 +58,24 @@ Container{
         }
     }
     
-    
-    Label {
-        id : description
-        text : "2013 WCS America S2 random custom description Semi Finals / Caster: RotterdaM & MrBitter - Aug 16, 2013 @ YouTube"
-        textStyle.color: Color.Black
-        textStyle.fontStyle: FontStyle.Italic
-        textStyle.fontSizeValue: 5
-        textStyle.fontSize: FontSize.PointValue
-        multiline: true
-        translationX: 0.0
-        translationY: -30.0
+    Container{
+        background: Color.Black
         verticalAlignment: VerticalAlignment.Bottom
-        horizontalAlignment: HorizontalAlignment.Left
-        textFormat: TextFormat.Html
-
+        translationY: -70.0
+        Label {
+	        id : description
+	        text : "2013 WCS America S2 random custom description Semi Finals / Caster: RotterdaM & MrBitter - Aug 16, 2013 @ YouTube"
+	        textStyle.color: Color.White
+            textStyle.fontStyle: FontStyle.Italic
+	        textStyle.fontSizeValue: 5
+	        textStyle.fontSize: FontSize.PointValue
+	        multiline: true
+	        translationX: 0.0
+	        verticalAlignment: VerticalAlignment.Bottom
+	        horizontalAlignment: HorizontalAlignment.Left
+	        textFormat: TextFormat.Html
+	
+	    }
     }
     
     

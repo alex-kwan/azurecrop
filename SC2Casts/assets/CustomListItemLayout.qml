@@ -5,7 +5,6 @@ Container {
         orientation: LayoutOrientation.LeftToRight
 
     }
-    maxHeight: 300
     property alias firstLabel : gameDescription.title
     property alias secondLabel : gameDescription.description
     property alias race1   : gameDescription.race1
@@ -19,7 +18,6 @@ Container {
     
     GameDescription{
         id : gameDescription
-        leftMargin : -100
        
     }
 
