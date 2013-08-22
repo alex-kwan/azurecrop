@@ -12,7 +12,6 @@ ListView {
         },
         GameDetailSheet {
             id: gameSheet 
-           // url : "http://www.youtube.com/embed/QflzaO2d_f4?rel=0&controls=0"
         }
     ]
     
@@ -27,7 +26,11 @@ ListView {
         
             content: GameDescription {
                 title : ListItemData.title.replace("vs", "\n");
-                description: ListItemData.description
+                description: {
+                    var desc = ListItemData.description
+                    var end = desc.indexOf("/");
+                    return desc.substring(0, end);
+                }
                 race1: ListItemData.race1
                 race2: ListItemData.race2
                 
