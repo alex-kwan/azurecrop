@@ -23,28 +23,10 @@ ListView {
     
     listItemComponents: [
         ListItemComponent {
-            type: "header"
-            Container{
-                minWidth: 1280
-                maxWidth: 1280.0
-                background: Color.Black
-                Label {
-                    text: ListItemData.title
-                    textStyle.color: Color.White
-                    textStyle.fontSize: FontSize.XXLarge
-                    textStyle.fontWeight: FontWeight.Bold
-                    textStyle.fontStyle: FontStyle.Normal
-                   
-                }
-            }
-          
-        }
-        ,
-        ListItemComponent {
             type: "listItem"
         
             content: CustomListItemLayout {
-                firstLabel : ListItemData.title
+                firstLabel : replaceVs(ListItemData.title)
                 secondLabel: ListItemData.description
                 race1: ListItemData.race1
                 race2: ListItemData.race2
@@ -77,6 +59,11 @@ ListView {
     
     onDataChanged :  {
         console.log("Data has changed", source)
+    }
+    
+    function replaceVs(str){
+     //   return str;
+        return str.replace("vs", " ");
     }
 
 }

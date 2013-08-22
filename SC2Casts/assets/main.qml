@@ -27,6 +27,10 @@ import bb.system 1.0
             menu = sc2castmenu.createObject();
             menu.gamelist = gamelist
         }
+        titleBar: TitleBar {
+            title: "Top Games"
+
+        }
 
     }
 	}

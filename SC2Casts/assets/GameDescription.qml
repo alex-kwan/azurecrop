@@ -7,7 +7,16 @@ Container{
     property alias race1 : versus.race1
     property alias race2 : versus.race2
     
-    
+    attachedObjects:[
+        TextStyleDefinition {
+            id: tsd
+            base: SystemDefaults.TextStyles.BodyText
+            fontWeight: FontWeight.Bold
+            fontSize: FontSize.Small
+            color: Color.create("#f4ffa200")
+            fontFamily: "helvetica"
+        }
+    ]
     layout:DockLayout{}
 
     minWidth: 1000
@@ -20,19 +29,25 @@ Container{
     
     Container{
 
-        minWidth: 700
+        minWidth: 800
         preferredWidth: 700
         layout:DockLayout{
          //   orientation: LayoutOrientation.LeftToRight
-
+         
         }
+        background: Color.White
         Label {
             id: title
-            text: "Scarlett vs Jaedong"
-            textStyle.color: Color.create("#f4ffa200")
+            text: "Scarlett \nJaedong"
             multiline: true
-            textStyle.fontStyle: FontStyle.Default
-            textStyle.fontWeight: FontWeight.Bold
+            textStyle{
+                base: tsd.style
+            }
+            
+            minHeight: 200.0
+            maxHeight: 200.0
+            preferredHeight: 200.0
+            translationY: -10.0
         }
         Versus {
             id : versus
@@ -42,20 +57,21 @@ Container{
             verticalAlignment: VerticalAlignment.Top
             preferredWidth: 300.0
             translationY: 0.0
+            translationX: -30.0
 
         }
         
-        ImageView {
-            horizontalAlignment: HorizontalAlignment.Left
-            verticalAlignment: VerticalAlignment.Bottom
-            imageSource: "asset:///0.jpg"
-            
-            scaleX: 0.5
-            scaleY: 0.5
-            translationX: -120.0
-            translationY: -20.0
-
-        }
+//        ImageView {
+//            horizontalAlignment: HorizontalAlignment.Left
+//            verticalAlignment: VerticalAlignment.Bottom
+//            imageSource: "asset:///0.jpg"
+//            
+//            scaleX: 0.5
+//            scaleY: 0.5
+//            translationX: -120.0
+//            translationY: -20.0
+//
+//        }
     }
     
     Container{
