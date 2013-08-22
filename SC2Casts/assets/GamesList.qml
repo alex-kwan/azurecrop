@@ -25,9 +25,9 @@ ListView {
         ListItemComponent {
             type: "listItem"
         
-            content: CustomListItemLayout {
-                firstLabel : replaceVs(ListItemData.title)
-                secondLabel: ListItemData.description
+            content: GameDescription {
+                title : ListItemData.title//replaceVs(ListItemData.title)
+                description: ListItemData.description
                 race1: ListItemData.race1
                 race2: ListItemData.race2
                 
@@ -60,10 +60,12 @@ ListView {
     onDataChanged :  {
         console.log("Data has changed", source)
     }
-    
+
+    layout: StackListLayout {
+
+    }
     function replaceVs(str){
-     //   return str;
-        return str.replace("vs", " ");
+        return str.replace("vs", "");
     }
 
 }

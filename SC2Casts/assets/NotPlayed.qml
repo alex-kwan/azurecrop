@@ -1,7 +1,13 @@
 import bb.cascades 1.0
 
 Page {
+    property alias title: titlebar.title
+    titleBar: TitleBar{
+        id:titlebar
+        title: "Not Played"
+    }
     Container {
+        
         layout:DockLayout{}
         background: Color.Black
         Label{

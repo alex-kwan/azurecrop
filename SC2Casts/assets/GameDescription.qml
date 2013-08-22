@@ -1,5 +1,4 @@
 import bb.cascades 1.0
-
 Container{
     
     property alias title : title.text
@@ -7,35 +6,43 @@ Container{
     property alias race1 : versus.race1
     property alias race2 : versus.race2
     
+    minHeight: 220	
+    maxHeight: 220
+    
     attachedObjects:[
         TextStyleDefinition {
             id: tsd
             base: SystemDefaults.TextStyles.BodyText
-            fontWeight: FontWeight.Bold
-            fontSize: FontSize.Small
-            color: Color.create("#f4ffa200")
+            fontSize: FontSize.Large
+           // color: Color.create("#f4ffa200")
+           color:Color.White
             fontFamily: "helvetica"
         }
     ]
     layout:DockLayout{}
 
-    minWidth: 1000
-    preferredWidth: 1000
-    maxWidth: 1280.0
-    minHeight: 300
-    maxHeight: 300
-    preferredHeight: 200.0
-    background: Color.White
+   
+    
     
     Container{
 
-        minWidth: 800
-        preferredWidth: 700
-        layout:DockLayout{
-         //   orientation: LayoutOrientation.LeftToRight
-         
+        minWidth: 1280
+        layout: StackLayout{
+            orientation: LayoutOrientation.LeftToRight
+
         }
-        background: Color.White
+        background: Color.Black
+        leftPadding: 50.0
+        Versus {
+            
+            id : versus
+            minHeight: 200
+            minWidth: 385
+            horizontalAlignment: HorizontalAlignment.Right
+            verticalAlignment: VerticalAlignment.Center
+            preferredWidth: 300.0
+        
+        }
         Label {
             id: title
             text: "Scarlett \nJaedong"
@@ -47,37 +54,18 @@ Container{
             minHeight: 200.0
             maxHeight: 200.0
             preferredHeight: 200.0
-            translationY: -10.0
-        }
-        Versus {
-            id : versus
-            minHeight: 200
-            minWidth: 385
-            horizontalAlignment: HorizontalAlignment.Right
-            verticalAlignment: VerticalAlignment.Top
-            preferredWidth: 300.0
-            translationY: 0.0
-            translationX: -30.0
-
+            translationY: 40.0
+            translationX: 40.0
+            horizontalAlignment: HorizontalAlignment.Left
+            verticalAlignment: VerticalAlignment.Center
         }
         
-//        ImageView {
-//            horizontalAlignment: HorizontalAlignment.Left
-//            verticalAlignment: VerticalAlignment.Bottom
-//            imageSource: "asset:///0.jpg"
-//            
-//            scaleX: 0.5
-//            scaleY: 0.5
-//            translationX: -120.0
-//            translationY: -20.0
-//
-//        }
     }
     
     Container{
         background: Color.Black
         verticalAlignment: VerticalAlignment.Bottom
-        translationY: -70.0
+        minWidth: 1280
         Label {
 	        id : description
 	        text : "2013 WCS America S2 random custom description Semi Finals / Caster: RotterdaM & MrBitter - Aug 16, 2013 @ YouTube"
@@ -86,12 +74,12 @@ Container{
 	        textStyle.fontSizeValue: 5
 	        textStyle.fontSize: FontSize.PointValue
 	        multiline: true
-	        translationX: 0.0
 	        verticalAlignment: VerticalAlignment.Bottom
 	        horizontalAlignment: HorizontalAlignment.Left
 	        textFormat: TextFormat.Html
-	
-	    }
+            translationX: 20.0
+
+        }
     }
     
     

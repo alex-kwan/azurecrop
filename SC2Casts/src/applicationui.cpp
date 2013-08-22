@@ -5,7 +5,9 @@
 #include <bb/cascades/AbstractPane>
 #include <bb/cascades/SceneCover>
 #include <bb/cascades/Container>
+#include <bb/device/DisplayInfo>
 
+using namespace bb::device;
 using namespace bb::cascades;
 
 ApplicationUI::ApplicationUI(bb::cascades::Application *app)
@@ -18,6 +20,16 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
     // create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
     // set created root object as a scene
+
+    DisplayInfo display;
+    int width = display.pixelSize().width();
+    int height = display.pixelSize().height();
+
+    QDeclarativePropertyMap* displayProperties = new QDeclarativePropertyMap;
+    displayProperties->insert("width", QVariant(width));
+    displayProperties->insert("height", QVariant(height));
+
+    qml->setContextProperty("DisplayInfo", displayProperties);
 
 
     QmlDocument *qmlCover = QmlDocument::create("asset:///AppCover.qml").parent(this);

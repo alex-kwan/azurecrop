@@ -16,26 +16,7 @@ MenuDefinition {
             toast.show();
         }
     }
-    actions: [
-        ActionItem {
-            title: "Top Games"
-           // imageSource: "asset:///images/salt_icon.png"
-            onTriggered: {
-                //gamelist.resetDataModel();
-            gamelist.data = "asset:///models/topgamedescriptions.xml";
-            
-            }
-        },
-        ActionItem {
-            title: "Recent Games"
-            // imageSource: "asset:///images/salt_icon.png"
-            onTriggered: {
-             //   gamelist.resetDataModel();
-                gamelist.data = "asset:///models/recentgamedescriptions.xml";
-                
-            }
-        }
-    ]
+    
 
     attachedObjects: [
         SystemToast {

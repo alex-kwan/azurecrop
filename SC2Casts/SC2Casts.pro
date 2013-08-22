@@ -2,6 +2,7 @@ APP_NAME = SC2Casts
 
 CONFIG += qt warn_on cascades10
 LIBS += -lbbdata
+LIBS += -lbbdevice
 include(config.pri)
 
 device {
