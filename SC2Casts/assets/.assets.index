@@ -1,5 +1,5 @@
 1
-47
+45
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -9,7 +9,6 @@ AppBackground.qml
 AppCover.qml
 AppOrientationHandler.qml
 CategoryList.qml
-GameCarousel.qml
 GameCarouselExperimental.qml
 GameDescription.qml
 GameDetailSheet.qml
@@ -45,5 +44,4 @@ models/recentgames.xml
 models/topgamedescriptions.xml
 models/topgames.xml
 NotPlayed.qml
-Round.qml
 Versus.qml

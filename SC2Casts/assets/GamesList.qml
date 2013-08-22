@@ -26,7 +26,7 @@ ListView {
             type: "listItem"
         
             content: GameDescription {
-                title : ListItemData.title//replaceVs(ListItemData.title)
+                title : ListItemData.title.replace("vs", "\n");
                 description: ListItemData.description
                 race1: ListItemData.race1
                 race2: ListItemData.race2
@@ -52,8 +52,11 @@ ListView {
     ]
     
     onTriggered: {
+        var chosenItem = dataModel.data(indexPath);
         var page = gameDetail.createObject();
         page.nav = nav;
+        page.title = chosenItem.title
+        page.description = chosenItem.description
         nav.push(page);
     }
     
@@ -64,9 +67,7 @@ ListView {
     layout: StackListLayout {
 
     }
-    function replaceVs(str){
-        return str.replace("vs", "");
-    }
+   
 
 }
 

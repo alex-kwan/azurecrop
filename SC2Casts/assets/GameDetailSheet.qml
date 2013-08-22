@@ -4,6 +4,7 @@ import bb.cascades 1.0
 Page {
     property alias nav : matchList.nav
     property alias title: titlebar.title
+    property alias description: description.text
     titleBar: TitleBar {
         id : titlebar
         title: "Polt vs TaeJa"
@@ -15,6 +16,7 @@ Page {
 
        		 }
        Label{
+           id : description
            leftMargin: 50
            
            text:"sdasdsadasdsdasdsa
