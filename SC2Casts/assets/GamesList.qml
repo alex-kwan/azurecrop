@@ -5,26 +5,26 @@ ListView {
     
     property alias data : dataModel.source
     property variant nav
+    
     attachedObjects: [
         ComponentDefinition {
             id: gameDetail
             source: "GameDetailSheet.qml"
-        },
-        GameDetailSheet {
-            id: gameSheet 
         }
     ]
+    
     
     dataModel: XmlDataModel {
         id: dataModel
         source: "models/topgamedescriptions.xml"
     }
-    
+
     listItemComponents: [
         ListItemComponent {
             type: "listItem"
-        
             content: GameDescription {
+                minWidth:720
+                maxWidth:1280
                 title : ListItemData.title.replace("vs", "\n");
                 description: {
                     var desc = ListItemData.description
@@ -49,9 +49,10 @@ ListView {
                         }
                     }
                 ]
-                
+                horizontalAlignment: HorizontalAlignment.Fill
+                verticalAlignment: VerticalAlignment.Fill
             }
-        } // end of second ListItemComponent]
+        }
     ]
     
     onTriggered: {
@@ -66,12 +67,11 @@ ListView {
     onDataChanged :  {
         console.log("Data has changed", source)
     }
-
-    layout: StackListLayout {
-
-    }
-   
-
+    
+    minWidth:720
+    maxWidth:1280
+    verticalAlignment: VerticalAlignment.Fill
+    horizontalAlignment: HorizontalAlignment.Fill
 }
 
  

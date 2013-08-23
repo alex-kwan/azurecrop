@@ -17,13 +17,19 @@ Page {
        		 }
        Label{
            id : description
-           leftMargin: 50
-           
+           leftMargin: 150
+           minWidth:720
+           maxWidth:720
+           horizontalAlignment: HorizontalAlignment.Fill
            text:"sdasdsadasdsdasdsa
            fdfdsff
            sdfdsf"
             textStyle.textAlign: TextAlign.Default
             multiline: true
+            textFormat:{
+                
+            }
+            translationX: 40.0
         }
         background: Color.Black
         MatchList{

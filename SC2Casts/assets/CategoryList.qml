@@ -7,13 +7,13 @@ NavigationPane{
     Menu.definition: menu
     id : nav
     Page {
-        
         GamesList{
+            
             id:gamelist
             nav : nav
         
         }
-    
+        
         titleBar: TitleBar {
             id : titlebar
             title: "Top Games"

@@ -37,35 +37,45 @@ Container {
                 type: "listItem"
                 
                 content: Container {
+                    minWidth: 720
+                    maxWidth: 1280
+                    horizontalAlignment: HorizontalAlignment.Fill
                     layout:DockLayout{
                     
                     }
                     Container{
-                        leftMargin: 20.0
-                        rightMargin: 20.0
-                        leftPadding: 50.0
-                        rightPadding: 50.0
+                     //   leftMargin: 20.0
+                      //  rightMargin: 20.0
+                      //  leftPadding: 50.0
+                      //  rightPadding: 50.0
+                        
                         minWidth: 1280
-                        minHeight: 150
                         maxWidth: 1280
-                        maxHeight: 150
-                        topMargin: 100
+                     //   topMargin: 100
                         topPadding: 5
+                        horizontalAlignment: HorizontalAlignment.Fill
+                        
+                        layout:StackLayout{
+                            orientation: LayoutOrientation.TopToBottom
+
+                        }
                         Label{
 	                        text: ListItemData.title
 	                        textStyle.color: Color.White
-                            opacity: 1.0
-                            horizontalAlignment: HorizontalAlignment.Left
-                            verticalAlignment: VerticalAlignment.Center
-                            textFormat: TextFormat.Html
+                            horizontalAlignment: HorizontalAlignment.Fill
                             textStyle.fontSize: FontSize.XXLarge
                             textStyle.fontSizeValue: 3.0
                             topMargin: 50.0
                         }
+                        Container{
+                            background: Color.White
+                            maxHeight: 50
+                            minHeight: 2
+                            minWidth:720
+                            maxWidth:1280
+                            horizontalAlignment: HorizontalAlignment.Fill
+                        }
                 }
-                    minHeight : 100
-                    maxHeight : 100
-                    minWidth : 500
                 
                 }
             
@@ -96,7 +106,9 @@ Container {
         
         }
 
-        bottomMargin: -100
+        minWidth: 720
+        maxWidth: 1280
+        horizontalAlignment: HorizontalAlignment.Fill
         function createURL(str) {
             return 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0';
         }

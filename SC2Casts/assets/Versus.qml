@@ -12,15 +12,19 @@ Container {
    
     ImageView {
         id :raceOne
-        imageSource: getImage("P");
-        
-        translationX: 0.0 + raceOffset("P");
+        imageSource: getImage("Z");
+        translationY: -50
+        translationX: -48 + raceOffset("Z")
+        scaleX: 0.5
+        scaleY: 0.5
     }
     ImageView {
         id : raceTwo
-        imageSource: getImage("T");
-        horizontalAlignment: HorizontalAlignment.Right
-        translationX: 200 + raceOffset("T");
+        imageSource: getImage("P");
+        translationY: -50
+        translationX: 55 + raceOffset("P");
+        scaleX: 0.5
+        scaleY: 0.5
     }
     
     onRace1Changed : {
@@ -30,18 +34,19 @@ Container {
     
     onRace2Changed : {
         raceTwo.imageSource = getImage(race2);
-        raceTwo.translationX = 200 + raceOffset(race2);
+        raceTwo.translationX = 50 + raceOffset(race2);
         
     }
 
-    maxHeight: 200
-    maxWidth: 400
-    
-    background: Color.Black
-    
+    maxHeight: 100
+    maxWidth: 200
+    background: Color.create("#c31d1b1a")
     function raceOffset(str){
         if( str == "P"){
-            return 50;
+            return 45;
+        }
+        else if ( str == "Z"){
+            return 10;
         }
         return 0;
     }
