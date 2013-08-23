@@ -7,6 +7,8 @@ Page {
     property alias description: description.text
     property alias casters: casters.text
     property alias additional : additional.text
+    property alias path : matchList.path
+    
     titleBar: TitleBar {
         id : titlebar
         title: "Polt vs TaeJa"
@@ -37,6 +39,7 @@ Page {
        }
         background: Color.Black
         MatchList{
+            
         	data : "models/match.xml"
             id: matchList
             horizontalAlignment: HorizontalAlignment.Center

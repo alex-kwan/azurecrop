@@ -2,7 +2,6 @@ import bb.cascades 1.0
 
 
 ListView {
-    
     property alias data : dataModel.source
     property variant nav
     
@@ -15,8 +14,10 @@ ListView {
     
     
     dataModel: XmlDataModel {
+        
         id: dataModel
         source: "models/recentgamedescriptions.xml"
+        
     }
 
     listItemComponents: [
@@ -80,6 +81,7 @@ ListView {
         var chosenItem = dataModel.data(indexPath);
         var page = gameDetail.createObject();
         page.nav = nav;
+        page.path = indexPath;
         page.title = chosenItem.title
         page.description = getMatchInfo(chosenItem.description);
         page.casters = getCasters(chosenItem.description)

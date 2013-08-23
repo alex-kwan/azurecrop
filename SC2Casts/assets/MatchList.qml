@@ -16,6 +16,8 @@ Container {
     property alias data : dataModel.source
     property variant page
     property variant nav
+    property alias path : view.rootIndexPath
+    
     background: Color.Black
     layout:StackLayout{
         orientation: LayoutOrientation.TopToBottom
@@ -23,8 +25,7 @@ Container {
 
     ListView{
         id : view
-        
-        
+        rootIndexPath: path
         dataModel: XmlDataModel {
             id: dataModel
             source: "models/match.xml"

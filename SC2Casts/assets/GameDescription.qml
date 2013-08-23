@@ -7,6 +7,7 @@ Container{
     property alias race1 : versus.race1
     property alias race2 : versus.race2
     
+    
     minHeight: 250	
     maxHeight: 250
     
