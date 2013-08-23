@@ -5,6 +5,8 @@ Page {
     property alias nav : matchList.nav
     property alias title: titlebar.title
     property alias description: description.text
+    property alias casters: casters.text
+    property alias additional : additional.text
     titleBar: TitleBar {
         id : titlebar
         title: "Polt vs TaeJa"
@@ -15,22 +17,24 @@ Page {
             orientation: LayoutOrientation.TopToBottom
 
        		 }
+            leftPadding:50
        Label{
            id : description
-           leftMargin: 150
-           minWidth:720
-           maxWidth:720
+           leftMargin: 100
+           preferredWidth:1280
+           maxWidth:1280
            horizontalAlignment: HorizontalAlignment.Fill
-           text:"sdasdsadasdsdasdsa
-           fdfdsff
-           sdfdsf"
-            textStyle.textAlign: TextAlign.Default
-            multiline: true
-            textFormat:{
-                
-            }
-            translationX: 40.0
+           text:"sdasdsadasdsdasdsa"
+            
         }
+       Label{
+           id:casters
+           text:"fdsfdfsdf"
+       }
+       Label{
+           id:additional
+           text:"fsdafsdfdd"
+       }
         background: Color.Black
         MatchList{
         	data : "models/match.xml"

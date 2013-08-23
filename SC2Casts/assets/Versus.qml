@@ -4,7 +4,10 @@ Container {
     
     property string race1
     property string race2
+    preferredHeight: 100
+    preferredWidth: 300
     
+    background:Color.Black
     layout: AbsoluteLayout {
     	
     }
@@ -14,7 +17,7 @@ Container {
         id :raceOne
         imageSource: getImage("Z");
         translationY: -50
-        translationX: -48 + raceOffset("Z")
+        translationX: -0 + raceOffset("Z")
         scaleX: 0.5
         scaleY: 0.5
     }
@@ -34,13 +37,9 @@ Container {
     
     onRace2Changed : {
         raceTwo.imageSource = getImage(race2);
-        raceTwo.translationX = 50 + raceOffset(race2);
+        raceTwo.translationX = 100 + raceOffset(race2);
         
     }
-
-    maxHeight: 100
-    maxWidth: 200
-    background: Color.create("#c31d1b1a")
     function raceOffset(str){
         if( str == "P"){
             return 45;

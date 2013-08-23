@@ -16,15 +16,33 @@ ListView {
     
     dataModel: XmlDataModel {
         id: dataModel
-        source: "models/topgamedescriptions.xml"
+        source: "models/recentgamedescriptions.xml"
     }
 
     listItemComponents: [
+        ListItemComponent{
+          type: "date"
+          content : Container {
+              layout:StackLayout{
+                  
+              }
+              preferredWidth:1280
+              horizontalAlignment: HorizontalAlignment.Fill
+                background: Color.create("#ff000000")
+                Label{
+                  text: ListItemData.title
+                    textStyle.color: Color.create("#e5ffffff")
+                    textStyle.fontSize: FontSize.XLarge
+                }
+          }  
+        },
         ListItemComponent {
             type: "listItem"
             content: GameDescription {
-                minWidth:720
+                preferredWidth: 1280
                 maxWidth:1280
+                horizontalAlignment: HorizontalAlignment.Fill
+                verticalAlignment : VerticalAlignment.Fill
                 title : ListItemData.title.replace("vs", "\n");
                 description: {
                     var desc = ListItemData.description
@@ -33,6 +51,11 @@ ListView {
                 }
                 race1: ListItemData.race1
                 race2: ListItemData.race2
+                casters: {
+                    var beg = ListItemData.description.indexOf(":")+1;
+                    var end = ListItemData.description.indexOf("-");
+                    return ListItemData.description.substring(beg,end);
+                }
                 
                 contextActions: [
                     ActionSet {
@@ -49,8 +72,6 @@ ListView {
                         }
                     }
                 ]
-                horizontalAlignment: HorizontalAlignment.Fill
-                verticalAlignment: VerticalAlignment.Fill
             }
         }
     ]
@@ -60,18 +81,27 @@ ListView {
         var page = gameDetail.createObject();
         page.nav = nav;
         page.title = chosenItem.title
-        page.description = chosenItem.description
-        nav.push(page);
+        page.description = getMatchInfo(chosenItem.description);
+        page.casters = getCasters(chosenItem.description)
+        page.additional = getAdditionalInfo(chosenItem.description);
+        nav.push(page); 
     }
     
-    onDataChanged :  {
-        console.log("Data has changed", source)
+    function getMatchInfo(str){
+        var desc = str
+        var end = str.indexOf("/");
+        return str.substring(0, end);
+    }
+    function getCasters(str){
+        var beg = str.indexOf(":")+1;
+        var end = str.indexOf("-");
+        return str.substring(beg,end);
     }
     
-    minWidth:720
-    maxWidth:1280
-    verticalAlignment: VerticalAlignment.Fill
-    horizontalAlignment: HorizontalAlignment.Fill
+    function getAdditionalInfo(str){
+        var beg = str.indexOf("-")+1;
+        return str.substring(beg);
+    }
 }
 
  

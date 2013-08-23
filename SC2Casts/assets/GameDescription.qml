@@ -45,12 +45,8 @@ Container{
             id : versus
             horizontalAlignment: HorizontalAlignment.Right
             verticalAlignment: VerticalAlignment.Top
-            minWidth: 200.0
-            preferredWidth: 200.0
-            maxWidth: 200.0
-            minHeight: 100.0
-            maxHeight: 100.0
-            preferredHeight: 100
+            preferredWidth: 300
+            preferredHeight:100
 
         }
         
