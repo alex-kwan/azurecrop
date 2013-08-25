@@ -25,17 +25,17 @@ Container {
 
     ListView{
         id : view
-        rootIndexPath: path
+        rootIndexPath: [1]
         dataModel: XmlDataModel {
             id: dataModel
-            source: "models/match.xml"
+            source: "models/recentgamedescriptions.xml"
         }
         
         
         listItemComponents: [
           
             ListItemComponent {
-                type: "listItem"
+                type: "game"
                 
                 content: Container {
                     minWidth: 720
@@ -45,14 +45,9 @@ Container {
                     
                     }
                     Container{
-                     //   leftMargin: 20.0
-                      //  rightMargin: 20.0
-                      //  leftPadding: 50.0
-                      //  rightPadding: 50.0
                         
                         minWidth: 1280
                         maxWidth: 1280
-                     //   topMargin: 100
                         topPadding: 5
                         horizontalAlignment: HorizontalAlignment.Fill
                         
@@ -84,11 +79,10 @@ Container {
         ]
         
         onTriggered: {
-            
             var chosenItem = dataModel.data(indexPath);
             
            
-            var data = chosenItem.link;
+            var data = chosenItem.url;
             if (page != null) {
                 delete page;
             }
@@ -98,7 +92,8 @@ Container {
                
             } else {
                 page = gameView.createObject();
-                page.title = chosenItem.title
+                page.navPane = nav;
+                page.title = chosenItem.title;
                 page.url = createURL(data);
                 
                 

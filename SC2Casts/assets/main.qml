@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+
 	
 TabbedPane{
     property variant menu
@@ -30,8 +31,8 @@ TabbedPane{
         	    type: "Recent Games"
                 gamemodel: "asset:///models/recentgamedescriptions.xml";
         	}
-            title: "Recent Games"
-      //   s   imageSource: "asset:///images/recentgames_icon_60x60.png"
+	            title: "Recent Games"
+	      //   s   imageSource: "asset:///images/recentgames_icon_60x60.png"
         }
     ]
     showTabsOnActionBar: true

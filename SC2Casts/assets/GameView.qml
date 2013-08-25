@@ -1,5 +1,7 @@
 import bb.cascades 1.0
 Page{
+   
+    property variant navPane
     property alias title: titlebar.title
     property alias url : webplayer.url
     
@@ -8,6 +10,7 @@ Page{
         title:"Game 7"
     }
     content:Container{
+
         WebView{
             
             id : webplayer
@@ -17,10 +20,24 @@ Page{
             maxHeight: 480
             verticalAlignment: VerticalAlignment.Center
             horizontalAlignment: HorizontalAlignment.Center
-        
-        
+        	
         }
     }
+    
+    paneProperties: NavigationPaneProperties {
+        
+        backButton:ActionItem{
+        	onTriggered:{
+        	   
+        	    webplayer.stop();
+                webplayer.destroy()
+                navPane.pop();
+        	    
+        	}    
+        }
+        
+    }
+   
 }
 
        

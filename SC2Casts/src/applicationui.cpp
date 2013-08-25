@@ -7,6 +7,7 @@
 #include <bb/cascades/Container>
 #include <bb/device/DisplayInfo>
 
+
 using namespace bb::device;
 using namespace bb::cascades;
 
@@ -17,8 +18,10 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
     // set parent to created document to ensure it exists for the whole application lifetime
     QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
 
+
     // create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
+
     // set created root object as a scene
 
     DisplayInfo display;

@@ -1,5 +1,5 @@
 1
-45
+44
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -12,7 +12,6 @@ CategoryList.qml
 GameCarouselExperimental.qml
 GameDescription.qml
 GameDetailSheet.qml
-GameListScreen.qml
 GameMenu.qml
 GamesList.qml
 GameView.qml

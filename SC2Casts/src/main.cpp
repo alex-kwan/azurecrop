@@ -2,7 +2,6 @@
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
 #include <bb/cascades/AbstractPane>
-
 #include <QLocale>
 #include <QTranslator>
 #include "applicationui.hpp"
@@ -16,8 +15,7 @@ using namespace bb::cascades;
 Q_DECL_EXPORT int main(int argc, char **argv)
 {
     // this is where the server is started etc
-    Application app(argc, argv);
-
+     Application app(argc, argv);
     // localization support
     QTranslator translator;
     QString locale_string = QLocale().name();

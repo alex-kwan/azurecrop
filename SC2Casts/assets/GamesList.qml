@@ -2,7 +2,7 @@ import bb.cascades 1.0
 
 
 ListView {
-    property alias data : dataModel.source
+    property variant dataSrc
     property variant nav
     
     attachedObjects: [
@@ -16,7 +16,7 @@ ListView {
     dataModel: XmlDataModel {
         
         id: dataModel
-        source: "models/recentgamedescriptions.xml"
+        source: dataSrc
         
     }
 
@@ -24,18 +24,23 @@ ListView {
         ListItemComponent{
           type: "date"
           content : Container {
+              
               layout:StackLayout{
                   
               }
               preferredWidth:1280
               horizontalAlignment: HorizontalAlignment.Fill
-                background: Color.create("#ff000000")
+                background: Color.create("#ff242424")
                 Label{
                   text: ListItemData.title
-                    textStyle.color: Color.create("#e5ffffff")
+                    textStyle.color: Color.White
                     textStyle.fontSize: FontSize.XLarge
                 }
           }  
+        },
+        ListItemComponent{
+          type: "game"
+          content: Container{}  
         },
         ListItemComponent {
             type: "listItem"
@@ -76,11 +81,12 @@ ListView {
             }
         }
     ]
-    
     onTriggered: {
-        var chosenItem = dataModel.data(indexPath);
+        var index = indexPath;
+        var chosenItem = dataModel.data(index);
         var page = gameDetail.createObject();
-        page.nav = nav;
+        page.nav = nav
+        page.data = dataSrc
         page.path = indexPath;
         page.title = chosenItem.title
         page.description = getMatchInfo(chosenItem.description);
