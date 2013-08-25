@@ -24,6 +24,21 @@ Page{
         }
     }
     
+    actions: [
+        InvokeActionItem {
+            ActionBar.placement: ActionBarPlacement.OnBar
+            title: "Share"
+            query {
+                mimeType: "text/plain"
+                invokeActionId: "bb.action.SHARE"
+            }
+            onTriggered: {
+                data = "Check out this game! \n\n "+webplayer.url+"\n\n shared by SC2 Observer";
+            }
+        }
+    ]
+    
+    
     paneProperties: NavigationPaneProperties {
         
         backButton:ActionItem{
