@@ -30,7 +30,7 @@
 
     <!-- The name that is displayed in the BlackBerry Tablet OS application installer. 
          May have multiple values for each language. See samples or xsd schema file. Optional. -->
-    <name>SC2casts</name>
+    <name>Watcher of the Void</name>
     
     <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade. 
          Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
@@ -52,7 +52,7 @@
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
     <author>Alex Kwan</author>
-    <description>SC2Casts viewer</description>
+    <description>An SC2 VOD viewer</description>
     
     <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
     <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
@@ -65,6 +65,11 @@
     
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.games</category>
+    <splashScreens>
+       <image>splash_landscape.png</image>
+       <image>splash_portrait.png</image>
+       <image>Q10_SPLASH.png</image>
+    </splashScreens>
     <configuration name="Device-Debug">
        <platformArchitecture>armle-v7</platformArchitecture>
        <asset path="arm/o.le-v7-g/SC2Casts" entry="true" type="Qnx/Elf">SC2Casts</asset>
@@ -85,7 +90,7 @@
     
     <!--  The icon for the application -->
     <icon>
-        <image>icon.png</image>
+        <image>iconz.png</image>
     </icon>
 
     <asset path="icon.png">icon.png</asset>
@@ -95,6 +100,10 @@
     <asset path="translations" dest="qm">
         <include name="*.qm"/>
     </asset>
+    <asset path="assets/images/iconz.png">iconz.png</asset>
+    <asset path="assets/images/splash_landscape.png">splash_landscape.png</asset>
+    <asset path="assets/images/splash_portrait.png">splash_portrait.png</asset>
+    <asset path="assets/images/Q10_SPLASH.png">Q10_SPLASH.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>

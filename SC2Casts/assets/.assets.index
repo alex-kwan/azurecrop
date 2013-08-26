@@ -1,5 +1,5 @@
 1
-44
+48
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -17,13 +17,17 @@ GamesList.qml
 GameView.qml
 images/background.amd
 images/background.png
+images/iconz.png
 images/picture.png
 images/protoss-icon.png
 images/protoss_icon_white_200x200.png
+images/Q10_SPLASH.png
 images/recentgames_icon_60x60.png
 images/round-border.amd
 images/round-border.png
 images/selecteddot.png
+images/splash_landscape.png
+images/splash_portrait.png
 images/terran-icon.png
 images/terran_icon_white_200x200.png
 images/test0.jpg

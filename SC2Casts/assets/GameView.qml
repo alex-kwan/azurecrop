@@ -33,7 +33,7 @@ Page{
                 invokeActionId: "bb.action.SHARE"
             }
             onTriggered: {
-                data = "Check out this game! \n\n "+webplayer.url+"\n\n shared by SC2 Observer";
+                data = "Check out this game! \n	\n "+webplayer.url+"\n\n shared by Watcher of the Void";
             }
         }
     ]
