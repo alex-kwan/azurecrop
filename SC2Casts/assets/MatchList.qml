@@ -59,7 +59,7 @@ Container {
 	                        text: ListItemData.title
 	                        textStyle.color: Color.White
                             horizontalAlignment: HorizontalAlignment.Fill
-                            textStyle.fontSize: FontSize.XXLarge
+                            textStyle.fontSize: FontSize.XLarge
                             textStyle.fontSizeValue: 3.0
                             topMargin: 50.0
                         }

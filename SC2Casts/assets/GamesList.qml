@@ -2,6 +2,8 @@ import bb.cascades 1.0
 
 
 ListView {
+    
+    
     property variant dataSrc
     property variant nav
     
@@ -63,21 +65,21 @@ ListView {
                     return ListItemData.description.substring(beg,end);
                 }
                 
-                contextActions: [
-                    ActionSet {
-                        title: "Share"
-                        
-                        ActionItem {
-                            title: "Share on BBM"
-                        }
-                        ActionItem {
-                            title: "Share on Facebook"
-                        }
-                        ActionItem {
-                            title: "Share on Whatsapp"
-                        }
-                    }
-                ]
+//                contextActions: [
+//                    ActionSet {
+//                        title: "Share"
+//                        
+//                        ActionItem {
+//                            title: "Share on BBM"
+//                        }
+//                        ActionItem {
+//                            title: "Share on Facebook"
+//                        }
+//                        ActionItem {
+//                            title: "Share on Whatsapp"
+//                        }
+//                    }
+//                ]
             }
         }
     ]

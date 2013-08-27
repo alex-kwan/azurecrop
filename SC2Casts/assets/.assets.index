@@ -1,5 +1,5 @@
 1
-48
+42
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -9,7 +9,6 @@ AppBackground.qml
 AppCover.qml
 AppOrientationHandler.qml
 CategoryList.qml
-GameCarouselExperimental.qml
 GameDescription.qml
 GameDetailSheet.qml
 GameMenu.qml
@@ -39,12 +38,7 @@ images/zerg-icon.png
 images/zerg_icon_white_200x200.png
 main.qml
 MatchList.qml
-models/items.xml
-models/items2.xml
-models/match.xml
 models/recentgamedescriptions.xml
-models/recentgames.xml
 models/topgamedescriptions.xml
-models/topgames.xml
 NotPlayed.qml
 Versus.qml

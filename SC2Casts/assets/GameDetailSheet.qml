@@ -28,16 +28,19 @@ Page {
            maxWidth:1280
            horizontalAlignment: HorizontalAlignment.Fill
            text:"sdasdsadasdsdasdsa"
-            
+            multiline: true
+
         }
        Label{
            id:casters
            text:"fdsfdfsdf"
-       }
+            multiline: true
+        }
        Label{
            id:additional
            text:"fsdafsdfdd"
-       }
+            multiline: true
+        }
         background: Color.Black
         MatchList{
             data : "models/recentgamedescriptions.xml"

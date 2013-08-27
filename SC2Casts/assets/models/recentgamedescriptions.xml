@@ -1,17 +1,190 @@
 <root>
-	<date title="Aug 19, 2013"/>
-		<listItem title="LiquidHero vs HyuN" race1="P" race2="Z" description="2013 WCS America S2 Quarter Finals / Caster: Gretorp &amp; Frodan - Aug 14, 2013 @ YouTube">
-			<game title="Game 1" url="cFn3U3Pp_Xo" />
-			<game title="Game 2" url="stwzlJg7KbA" />
+		<listItem title="Scarlett vs MaruPrime" race1="Z" race2="T" description="WCS Season 2 Finals Group Stage / Caster: Apollo &amp; Kaelaris - Aug 27, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="qDlWuxOy5J8" />
 		</listItem>
-		<listItem title="Grubby vs Duckdeok" race1="P" race2="P" description="2013 WCS America S2 Semi Finals / Caster: Gretorp &amp; Frodan - Aug 16, 2013 @ YouTube"/>
-	<date title="Aug 20,2013"/>
-		<listItem title="Polt vs TaeJa" race1="T" race2="T" description="2013 WCS Europe S2 Semi Finals / Caster: Apollo &amp; ToD - Aug 16, 2013 @ YouTube">
-			<game title="Game1" url="cFn3U3Pp_Xo" />
-			<game title="Game2" url="not played" />
-			<game title="Game3" url="not played" />
-		</listItem>
-		<listItem title="Scarlett vs Jaedong" race1="Z" race2="Z" description="2013 WCS America S2 Semi Finals / Caster: RotterdaM &amp; MrBitter - Aug 16, 2013 @ YouTube"/>
-		<listItem title="Golden vs SeleCT" race1="Z" race2="T" description="IEM Shanghai Quarter Finals / Caster: ToD &amp; Maynarde - Aug 16, 2013 @ YouTube"/>
-</root>
 
+		<listItem title="Naniwa vs Duckdeok" race1="P" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Rotterdam - Aug 27, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="QkjyVc8JrYA" />
+		</listItem>
+
+		<listItem title="Polt vs LG-IM.First" race1="T" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Apollo - Aug 27, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="BKv-C8wuhbQ" />
+		</listItem>
+
+		<listItem title="MC vs SKT.Rain" race1="P" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 27, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="o_x8qIUIdzU" />
+		</listItem>
+		<listItem title="Scarlett vs aLive" race1="Z" race2="T" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Apollo - Aug 27, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="rAWwyGY5Gbk" />
+		</listItem>
+		
+		<listItem title="elfi vs nunez" race1="P" race2="T" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 27, 2013 &amp; YouTube">
+			<game title="Best of 3 - All in 1 video" url="2OK0wgfVD1Q" />
+		</listItem>
+		
+		
+		<listItem title="MaruPrime vs aLive" race1="T" race2="T" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 26, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="o6olgieqMnE" />
+		</listItem>
+
+		<listItem title="Scarlett vs aLive" race1="Z" race2="T" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp;amp; Apollo - Aug 27, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="rAWwyGY5Gbk" />
+		</listItem>
+
+		<listItem title="MMA vs Scarlett" race1="T" race2="Z" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Apollo - Aug 26, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="1O_m-N6bFO4" />
+		</listItem>
+
+		<listItem title="Duckdeok vs TaeJa" race1="P" race2="T" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Rotterdam - Aug 26, 2013">
+			<game title="Best of 3 - All in 1 video" url="P88te97wTLE" />
+		</listItem>
+
+		<listItem title="WhiteRa vs Unknown Player" race1="P" race2="Z" description="Starcraft Ladder Battle.net VOD / Caster: HD Starcraft - Aug 26, 2013 @ YouTube">
+			<game title="Game 1" url="NIrTlhvx-qE" />
+		</listItem>
+
+
+		<listItem title="Innovation vs Naniwa" race1="T" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 25, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="P5zS1MYjV-4" />
+		</listItem>
+
+		<listItem title="Naniwa vs Duckdeok" race1="P" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 25, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="rh_Pfol0OV8" />
+		</listItem>
+		
+			<listItem title="Polt vs Grubby" race1="T" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 25, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="3xvYX4ZOIis" />
+		</listItem>
+
+		<listItem title="Jaedong vs MC" race1="Z" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Apollo - Aug 25, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="8tzunY5Fu_o" />
+		</listItem>
+
+		<listItem title="Grubby vs ST_Bomber" race1="P" race2="T" description="WCS Season 2 Finals Group Stage / Caster: Apollo &amp; Rotterdam - Aug 25, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="qmMvAvVI8J0" />
+		</listItem>
+
+		<listItem title="ret vs Verdi" race1="Z" race2="P" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 25, 2013 @ YouTube">
+			<game title="Game 1" url="KjnZ8t-1iZs" />
+		</listItem>
+
+		<listItem title="LucifroN vs Goswser" race1="T" race2="Z" description="Unknown Event Pro SC2 VOD / Caster: HD Starcraft - Aug 25, 2013 @ YouTube">
+			<game title="Game 1" url="FRk4A6N2DyU" />
+		</listItem>
+
+		<listItem title="ST_Bomber vs LG-IM.First" race1="T" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Apollo &amp; Rotterdam - Aug 24, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="stwzlJg7KbA" />
+		</listItem>
+
+		<listItem title="MC vs WelMu" race1="T" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 24, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="BOpvokg83HY" />
+		</listItem>
+
+		<listItem title="Polt vs LG-IM.First" race1="T" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 24, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="19DMe2KhYaU" />
+		</listItem>
+
+		<listItem title="SKT.Rain vs Jaedong" race1="P" race2="Z" description="WCS Season 2 Finals Group Stage / Caster: Artosis &amp; Apollo - Aug 24, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="iyJM2LVpEFo" />
+		</listItem>
+
+		<listItem title="WelMu vs SKT.Rain" race1="P" race2="P" description="WCS Season 2 Finals Group Stage / Caster: Kaelaris &amp; ToD - Aug 24, 2013 @ YouTube">
+			<game title="Best of 3 - All in 1 video" url="m4IznnwGmME" />
+		</listItem>
+
+		<listItem title="ret vs ForGG" race1="Z" race2="T" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 24, 2013 @ YouTube">
+			<game title="Game 1" url="8qn8qzrI3gU" />
+		</listItem>
+
+		<listItem title="GoOdy vs Tarrantius" race1="T" race2="P" description="ESL Pro Series Pro SC2 VOD / Caster: Husky Starcraft - Aug 23, 2013 @ YouTube">
+			<game title="Game 1" url="0DYa7u101m4" />
+		</listItem>
+
+		<listItem title="Stephano vs Tefel" race1="Z" race2="Z" description="DreamHack Valencia 2013 Group Stage / Caster: Husky Starcraft - Aug 23, 2013 @ YouTube">
+			<game title="Game 1" url="1Ouhj58FsIQ" />
+		</listItem>
+
+		<listItem title="ret vs LoweLy" race1="Z" race2="Z" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 23, 2013 @ YouTube">
+			<game title="Game 1" url="zO089Wch-Ho" />
+		</listItem>
+		
+			<listItem title="MarineKing vs CJ_EffOrt" race1="T" race2="Z" description="2013 WCS Korea S3 Qualifier / Caster: Khaldor - Aug 22, 2013 @ YouTube">
+			<game title="Game 1" url="9_RFfCScHHk" />
+			<game title="Game 2" url="4FTHKDlTSOI" />
+			<game title="Game 3" url="not played" />
+		</listItem>
+
+		<listItem title="TLO vs Polt" race1="Z" race2="T" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 22, 2013 @ YouTube">
+			<game title="Game 1" url="fKxV87GN2t8" />
+		</listItem>
+
+		<listItem title="TaeJa vs HyuN" race1="T" race2="Z" description="ASUS ROG Summer 2013 Group Stage / Caster: HD Starcraft - Aug 22, 2013 @ YouTube">
+			<game title="Game 1" url="CgZY1BbgryE" />
+		</listItem>
+
+		<listItem title="Jjakji vs LosirA " race1="T" race2="Z" description="2013 WCS Korea S3 Up and Downs / Caster: Khaldor &amp; Wolf - Aug 21, 2013 @ YouTube">
+			<game title="Game 1" url="j-jiy3jeZFQ" />
+		</listItem>
+
+		<listItem title="STCurious vs SangHo" race1="Z" race2="P" description="2013 WCS Korea S3 Up and Downs / Caster: Khaldor &amp; Wolf - Aug 21, 2013 @ YouTube">
+			<game title="Game 1" url="xibdVFKQ6Mg" />
+		</listItem>
+
+		<listItem title="TLO vs VortiX" race1="Z" race2="Z" description="Unknown Event Pro SC2 VOD / Caster: Madals - Aug 21, 2013 @ YouTube">
+			<game title="Game 1" url="SOcKnsGx3t0" />
+		</listItem>
+
+		<listItem title="WhiteRa vs Unknown Player" race1="P" race2="T" description="Special Tactics Live Commentary / Caster: WhiteRa - Aug 21, 2013 @ YouTube">
+			<game title="Game 1" url="7-OFXtjmx54" />
+		</listItem>
+
+		<listItem title="MaruPrime vs SKT.Rain" race1="T" race2="P" description="2013 WCS Korea S2 Finals / Caster: Artosis &amp; tasteless - Aug 20, 2013 @ YouTube">
+			<game title="Game 1" url="zzMy33nHSIM" />
+			<game title="Game 2" url="xQYIV0E8W8Y" />
+			<game title="Game 3" url="hxvoC_7uReM" />
+			<game title="Game 4" url="IfV-kuKJI0" />
+			<game title="Game 5" url="IkzW0kezhyM" />
+			<game title="Game 6" url="gLlpK-fHPdQ" />
+			<game title="Game 7" url="not played" />
+		</listItem>
+
+		<listItem title="ToD vs cArn" race1="P" race2="T" description="Unknown Event Pro SC2 VOD / Caster: Madals - Aug 20, 2013 @ YouTube">
+			<game title="Game 1" url="QP-h28MuCOo" />
+			<game title="Game 2" url="UFPXw2YF4Zg" />
+			<game title="Game 3" url="not played" />
+		</listItem>
+
+		<listItem title="WhiteRa vs Unknown Player" race1="P" race2="Z" description="Special Tactics Live Commentary / Caster: WhiteRa - Aug 20, 2013 @ YouTube">
+			<game title="Game 1" url="I2VJbJHGdjo" />
+		</listItem>
+
+		<listItem title="Dongraegu vs Squirtle" race1="Z" race2="P" description="2013 WCS Korea S3 Up and Downs / Caster: Khaldor &amp; Wolf - Aug 19, 2013 @ YouTube">
+			<game title="Game 1" url="GUDhTjKEBDM" />
+		</listItem>
+
+		<listItem title="elfi vs Delking" race1="P" race2="P" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 19, 2013 @ YouTube">
+			<game title="Game 1" url="0Kf48PjIX9Q" />
+		</listItem>
+
+		<listItem title="WhiteRa vs Unknown Player" race1="P" race2="Z" description="Special Tactics Live Commentary / Caster: WhiteRa - Aug 19, 2013 @ YouTube
+">
+			<game title="Game 1" url="b1Yozmgnoek" />
+		</listItem>
+
+		<listItem title="MC vs Duckdeok" race1="P" race2="P" description="2013 WCS Europe S2 Finals / Caster: Apollo &amp; Kaelaris - Aug 18, 2013 @ YouTube">
+			<game title="Best of 7 - All in 1 video" url="hW2vVbJSi2E" />
+		</listItem>
+
+		<listItem title="HasuObs vs WelMu" race1="P" race2="P" description="2013 WCS Europe S2 5th-8th Place / Caster: Apollo &amp; Kaelaris - Aug 18, 2013 @ YouTube">
+			<game title="Best of 5 - All in 1 video" url="O282bJPWjGw" />
+		</listItem>
+
+		<listItem title="Naniwa vs VortiX" race1="P" race2="Z" description="2013 WCS Europe S2 5th-8th Place / Caster: Kaelaris &amp; ToD - Aug 18, 2013 @ YouTube">
+			<game title="Best of 5 - All in 1 video" url="JRj0lwdmgIE" />
+		</listItem>
+
+		<listItem title="TaeJa vs EmpireKas" race1="T" race2="T" description="Starcraft Ladder Battle.net VOD / Caster: Madals - Aug 18, 2013 @ YouTube">
+			<game title="Game 1" url="XcYwgLjppss" />
+		</listItem>
+		
+</root>
