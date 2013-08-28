@@ -1,5 +1,5 @@
 1
-42
+44
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -14,6 +14,8 @@ GameDetailSheet.qml
 GameMenu.qml
 GamesList.qml
 GameView.qml
+images/1377631251_224360-folder-recent.png
+images/1377631302_MB__Champions_League.png
 images/background.amd
 images/background.png
 images/iconz.png

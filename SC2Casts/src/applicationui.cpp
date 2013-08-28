@@ -35,12 +35,12 @@ ApplicationUI::ApplicationUI(bb::cascades::Application *app)
     qml->setContextProperty("DisplayInfo", displayProperties);
 
 
-    QmlDocument *qmlCover = QmlDocument::create("asset:///AppCover.qml").parent(this);
-    if( !qmlCover->hasErrors()){
-    	Container *coverContainer = qmlCover->createRootObject<Container>();
-    	SceneCover *sceneCover = SceneCover::create().content(coverContainer);
-    	Application::instance()->setCover(sceneCover);
-    }
+//    QmlDocument *qmlCover = QmlDocument::create("asset:///AppCover.qml").parent(this);
+//    if( !qmlCover->hasErrors()){
+//    	Container *coverContainer = qmlCover->createRootObject<Container>();
+//    	SceneCover *sceneCover = SceneCover::create().content(coverContainer);
+//    	Application::instance()->setCover(sceneCover);
+//    }
     app->setScene(root);
 }
 

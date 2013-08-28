@@ -24,6 +24,7 @@ TabbedPane{
                 gamemodel: "asset:///models/recentgamedescriptions.xml";
             }
             title: "Recent Games"
+            imageSource: "asset:///images/1377631251_224360-folder-recent.png"
             //   s   imageSource: "asset:///images/recentgames_icon_60x60.png"
         },
         Tab{
@@ -32,7 +33,8 @@ TabbedPane{
               gamemodel: "asset:///models/topgamedescriptions.xml";
           }
             title: "Top Games"
-          //  imageSource: "asset:///images/protoss-icon.png"
+            imageSource: "asset:///images/1377631302_MB__Champions_League.png"
+            //  imageSource: "asset:///images/protoss-icon.png"
         }
     ]
     showTabsOnActionBar: true

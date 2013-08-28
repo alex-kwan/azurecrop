@@ -14,13 +14,11 @@ Page{
         WebView{
             
             id : webplayer
-            minWidth: 640
-            minHeight: 480
-            maxWidth: 640
-            maxHeight: 480
-            verticalAlignment: VerticalAlignment.Center
-            horizontalAlignment: HorizontalAlignment.Center
-        	
+            preferredHeight: 1280
+            preferredWidth: 1280
+            verticalAlignment: VerticalAlignment.Fill
+            horizontalAlignment: HorizontalAlignment.Fill
+
         }
     }
     
