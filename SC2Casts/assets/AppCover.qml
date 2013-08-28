@@ -2,66 +2,39 @@ import bb.cascades 1.0
 
 
     Container {
-        maxWidth: 334.0
-        maxHeight: 400
+      
         background: Color.Black
 
 		layout : DockLayout{
 		    
 		}
-    translationY: 0.0
-    Container{
-		    layout:DockLayout{
-		        
-		    }
+    	ImageView
+    	{
+    	    id: imageView
+	        imageSource: "asset:///images/terran_icon_white_200x200.png"
+	        horizontalAlignment: HorizontalAlignment.Center
+	        verticalAlignment: VerticalAlignment.Center
 
-        translationY: 40.0
-        ImageView {
-                imageSource: "asset:///0.jpg"
-                horizontalAlignment: HorizontalAlignment.Right
-            translationY: -20.0
-
-        }
-            Container {
-                layout: DockLayout {
-                }
-                horizontalAlignment: HorizontalAlignment.Center
-            verticalAlignment: VerticalAlignment.Bottom
-                translationY: -20.0
-            minWidth : 334
-                background: Color.create("#c15d5454")
-                Label {
-                    text: "12 new games"
-                    textStyle.color: Color.White
-                    horizontalAlignment: HorizontalAlignment.Center
-                    verticalAlignment: VerticalAlignment.Bottom
-                    translationX: 0.0
-                textStyle.fontStyle: FontStyle.Normal
-                    textStyle.fontWeight: FontWeight.Normal
-                translationY: 0.0
-
+    	}
+    	
+   // 	onVisibleChanged: {
+         
+  //   }
+    //	on
+     onVisibleChanged: {
+            var type = Math.floor(3 * Math.random());
+            switch( type ){
+                case 0: 
+                    imageView.imageSource = "asset:///images/terran_icon_white_200x200.png"
+                    break;
+                case 1: 
+                    imageView.imageSource = "asset:///images/protoss_icon_white_200x200.png"
+                    break;
+                case 2: 
+                    imageView.imageSource = "asset:///images/zerg_icon_white_200x200.png"
+                    break;
+                default: break;
             }
-            }
-
-        }
-		
-		Container {
-        translationY: 10.0
-        //  background: Color.create("#d85a5764")
-            Label {
-
-                text: "Recent Games"
-                maxHeight: 50
-                minWidth:344
-                textStyle.color: Color.White
-                horizontalAlignment: HorizontalAlignment.Center
-                textStyle.textAlign: TextAlign.Left
-            translationX: 20.0
-
-        }
-        }
-		
-		
-		
+          }
     }
 

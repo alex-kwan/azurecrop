@@ -2,21 +2,21 @@ import bb.cascades 1.0
 
 	
 TabbedPane{
- //   property variant menu
- //   Menu.definition: menu
-//    attachedObjects: [
-//        
-//        ComponentDefinition {
-//            id: sc2castmenu
-//            source: "GameMenu.qml"
-//        }
-//    ]
+    property variant menu
+    Menu.definition: menu
+    attachedObjects: [
+        
+        ComponentDefinition {
+            id: sc2castmenu
+            source: "GameMenu.qml"
+        }
+    ]
     
-//    onCreationCompleted: {
-//        
-//        // Create the app menu for the cookbook.
-//        menu = sc2castmenu.createObject();
-//    }
+    onCreationCompleted: {
+        
+        // Create the app menu for the cookbook.
+        menu = sc2castmenu.createObject();
+    }
     tabs: [
         Tab{
             content:CategoryList{
