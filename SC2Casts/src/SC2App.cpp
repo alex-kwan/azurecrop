@@ -19,12 +19,12 @@ SC2App::SC2App(bb::cascades::Application *app)
     // create scene document from main.qml asset
     // set parent to created document to ensure it exists for the whole application lifetime
 
-	SC2DynamicCover *activeFrame = new SC2DynamicCover();
-	Application::instance()->setCover(activeFrame);
+//	SC2DynamicCover *activeFrame = new SC2DynamicCover();
+	//Application::instance()->setCover(activeFrame);
 
     QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
     qml->setContextProperty("_store", this);
-    qml->setContextProperty("activeFrame", activeFrame);
+  //  qml->setContextProperty("activeFrame", activeFrame);
     // create root object for the UI
     AbstractPane *root = qml->createRootObject<AbstractPane>();
 

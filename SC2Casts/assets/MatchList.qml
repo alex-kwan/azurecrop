@@ -106,7 +106,7 @@ Container {
         maxWidth: 1280
         horizontalAlignment: HorizontalAlignment.Fill
         function createURL(str) {
-            return 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0';
+            return 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0&autoplay=1';
         }
     
     }
