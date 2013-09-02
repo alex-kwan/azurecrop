@@ -4,7 +4,7 @@
 #include <bb/cascades/AbstractPane>
 #include <QLocale>
 #include <QTranslator>
-#include "applicationui.hpp"
+#include "SC2App.hpp"
 
 // include JS Debugger / CS Profiler enabler
 // this feature is enabled by default in the debug build only
@@ -24,7 +24,7 @@ Q_DECL_EXPORT int main(int argc, char **argv)
         app.installTranslator( &translator );
     }
 
-    new ApplicationUI(&app);
+    new SC2App(&app);
 
     // we complete the transaction started in the app constructor and start the client event loop here
     return Application::exec();

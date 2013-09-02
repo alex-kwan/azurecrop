@@ -2,12 +2,11 @@ import bb.cascades 1.0
 import bb.system 1.0
 
 MenuDefinition {
-    
+    property variant nav
     property GamesList gamelist 
     settingsAction: SettingsActionItem {
         onTriggered: {
-            toast.body = "Settings"
-            toast.show();
+        	settings.open();
         }
     }
     helpAction: HelpActionItem {
@@ -19,6 +18,9 @@ MenuDefinition {
     
 
     attachedObjects: [
+        Settings{
+          id:settings  
+        },
         SystemToast {
             id: toast
             body: "Toasty"

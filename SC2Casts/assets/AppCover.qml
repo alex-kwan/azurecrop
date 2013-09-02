@@ -11,30 +11,35 @@ import bb.cascades 1.0
     	ImageView
     	{
     	    id: imageView
-	        imageSource: "asset:///images/terran_icon_white_200x200.png"
+	        imageSource: "asset:///images/zerg_icon_white_200x200.png"
 	        horizontalAlignment: HorizontalAlignment.Center
 	        verticalAlignment: VerticalAlignment.Center
 
     	}
     	
-   // 	onVisibleChanged: {
-         
-  //   }
-    //	on
-     onVisibleChanged: {
-            var type = Math.floor(3 * Math.random());
-            switch( type ){
-                case 0: 
-                    imageView.imageSource = "asset:///images/terran_icon_white_200x200.png"
-                    break;
-                case 1: 
-                    imageView.imageSource = "asset:///images/protoss_icon_white_200x200.png"
-                    break;
-                case 2: 
-                    imageView.imageSource = "asset:///images/zerg_icon_white_200x200.png"
-                    break;
-                default: break;
-            }
-          }
+onVisibleChanged: {
+    var race = _store.get("activeFrameChooserObjectName", null);
+    console.log("111This is the current active frame race -> " + race);
+    if( race == "P"){
+        imageView.imageSource = "asset:///images/protoss_icon_white_200x200.png"
+    } else if ( race == "Z" ) {
+        imageView.imageSource = "asset:///images/zerg_icon_white_200x200.png"
+    } else {
+        imageView.imageSource = "asset:///images/terran_icon_white_200x200.png"
     }
+
+}
+    onLayoutChanged: {
+        var race = _store.get("activeFrameChooserObjectName", null);
+        console.log("111This is the current active frame race -> " + race);
+        if( race == "P"){
+            imageView.imageSource = "asset:///images/protoss_icon_white_200x200.png"
+        } else if ( race == "Z" ) {
+            imageView.imageSource = "asset:///images/zerg_icon_white_200x200.png"
+        } else {
+            imageView.imageSource = "asset:///images/terran_icon_white_200x200.png"
+        }
+    
+    }
+ }
 

@@ -11,12 +11,17 @@ namespace bb { namespace cascades { class Application; }}
  *
  *Use this object to create and init app UI, to create context objects, to register the new meta types etc.
  */
-class ApplicationUI : public QObject
+class SC2App : public QObject
 {
     Q_OBJECT
 public:
-    ApplicationUI(bb::cascades::Application *app);
-    virtual ~ApplicationUI() {}
+    SC2App(bb::cascades::Application *app);
+    virtual ~SC2App() {}
+
+	Q_INVOKABLE
+	QString get(const QString &objectName, const QString &defaultValue);
+	Q_INVOKABLE
+	void set(const QString &objectName, const QString &inputValue);
 };
 
 

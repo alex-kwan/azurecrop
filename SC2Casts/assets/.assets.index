@@ -1,10 +1,11 @@
 1
-44
+46
 0.jpg
 2.jpg
 720x720/AppBackground.qml
 720x720/AppOrientationHandler.qml
 720x720/images/background.png
+ActiveFramePreview.qml
 AppBackground.qml
 AppCover.qml
 AppOrientationHandler.qml
@@ -43,4 +44,5 @@ MatchList.qml
 models/recentgamedescriptions.xml
 models/topgamedescriptions.xml
 NotPlayed.qml
+Settings.qml
 Versus.qml
