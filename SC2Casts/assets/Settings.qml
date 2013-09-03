@@ -1,5 +1,7 @@
 import bb.cascades 1.0
 Sheet {
+    attachedObjects:[
+    ]
     id:settingssheet
     content : Page{
         titleBar: TitleBar {
@@ -108,7 +110,7 @@ Sheet {
                         selected: _store.get("activeFrameChooserObjectName",null) == "T"
                     }//Option
                 }//DropDown
-            }//Container       
+            }//Container   
         }//Container
     }//Page
 }//Sheet

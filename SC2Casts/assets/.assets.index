@@ -1,5 +1,5 @@
 1
-46
+47
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -43,6 +43,7 @@ main.qml
 MatchList.qml
 models/recentgamedescriptions.xml
 models/topgamedescriptions.xml
+NetworkDialog.qml
 NotPlayed.qml
 Settings.qml
 Versus.qml

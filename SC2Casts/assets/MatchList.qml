@@ -94,7 +94,7 @@ Container {
                 page = gameView.createObject();
                 page.navPane = nav;
                 page.title = chosenItem.title;
-                page.url = createURL(data);
+                page.url = createURL(data, true);
                 
                 
             }
@@ -105,8 +105,12 @@ Container {
         minWidth: 720
         maxWidth: 1280
         horizontalAlignment: HorizontalAlignment.Fill
-        function createURL(str) {
-            return 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0&autoplay=1';
+        function createURL(str, onMobileData) {
+	        var url = 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0';
+	        if( onMobileData == true ){
+	        	url += '&autoplay=1';
+	        }
+            return url
         }
     
     }
