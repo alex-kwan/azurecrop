@@ -22,24 +22,6 @@ MenuDefinition {
     attachedObjects: [
         Settings{
           id:settings  
-        },
-        SystemToast {
-            id: toast
-            body: "Toasty"
-        },
-        SystemDialog{
-            id: dialog
-            body: "Streaming video content may incur costs additional costs from your telephone carrier. We advise you connect to Wi-Fi to continue watching. You can go to settings to disable this message in the future."
-            title: "Warning Mobile Data Usage"
-            returnKeyAction: SystemUiReturnKeyAction.Next
-            modality: SystemUiModality.Application
-            rememberMeChecked: true
-            rememberMeText: "Don't show this dialog"
-            defaultButton: SystemUiButton {
-            	label: "hello"
-            }
-            dismissAutomatically: true
-            buttonAreaLimit: 3
         }
        
     ]

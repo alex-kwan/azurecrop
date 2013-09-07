@@ -1,13 +1,14 @@
-#include "SC2DynamicCover.h"
+#include "ActiveFrameQML.h"
 
 #include <bb/cascades/SceneCover>
 #include <bb/cascades/Container>
 #include <bb/cascades/Application>
 #include <bb/cascades/QmlDocument>
+#include <bb/cascades/ImageView>
 
 using namespace bb::cascades;
 
-SC2DynamicCover::SC2DynamicCover(QObject *parent)
+ActiveFrameQML::ActiveFrameQML(QObject *parent)
     : SceneCover(parent)
 {
     QmlDocument *qml = QmlDocument::create("asset:///AppCover.qml")
@@ -15,11 +16,11 @@ SC2DynamicCover::SC2DynamicCover(QObject *parent)
     Container *mainContainer = qml->createRootObject<Container>();
     setContent(mainContainer);
 
-    m_coverImage = (ImageView*)mainContainer->findChild<ImageView*>("imageView");
-    m_coverImage->setParent(mainContainer);
+    m_coverLabel = mainContainer->findChild<ImageView*>("TheLabel");
+    m_coverLabel->setParent(mainContainer);
 }
 
-void SC2DynamicCover::update(QString appText) {
-	m_coverImage->setImageSource(QUrl(appText));
-  //  m_coverLabel->setText(appText);
+void ActiveFrameQML::update(QString appText) {
+
+    m_coverLabel->setImageSource(QUrl(appText));
 }

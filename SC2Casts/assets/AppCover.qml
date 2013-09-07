@@ -1,45 +1,39 @@
 import bb.cascades 1.0
 
-
-    Container {
-      
-        background: Color.Black
-
-		layout : DockLayout{
-		    
-		}
-    	ImageView
-    	{
-    	    id: imageView
-	        imageSource: "asset:///images/zerg_icon_white_200x200.png"
-	        horizontalAlignment: HorizontalAlignment.Center
-	        verticalAlignment: VerticalAlignment.Center
-
-    	}
-    	
-onVisibleChanged: {
-    var race = _store.get("activeFrameChooserObjectName", null);
-    console.log("111This is the current active frame race -> " + race);
-    if( race == "P"){
-        imageView.imageSource = "asset:///images/protoss_icon_white_200x200.png"
-    } else if ( race == "Z" ) {
-        imageView.imageSource = "asset:///images/zerg_icon_white_200x200.png"
-    } else {
-        imageView.imageSource = "asset:///images/terran_icon_white_200x200.png"
-    }
-
-}
-    onLayoutChanged: {
-        var race = _store.get("activeFrameChooserObjectName", null);
-        console.log("111This is the current active frame race -> " + race);
-        if( race == "P"){
-            imageView.imageSource = "asset:///images/protoss_icon_white_200x200.png"
-        } else if ( race == "Z" ) {
-            imageView.imageSource = "asset:///images/zerg_icon_white_200x200.png"
-        } else {
-            imageView.imageSource = "asset:///images/terran_icon_white_200x200.png"
-        }
+Container{
+    background: Color.Black
+    layout : DockLayout{
     
     }
- }
+    Container {
+	
+			layout : DockLayout{
+			    
+			}
+	background: Color.Black
+        verticalAlignment: VerticalAlignment.Center
+        horizontalAlignment: HorizontalAlignment.Center
+        ImageView
+	    	{
+                objectName:"TheLabel"
+	    	    id: appCoverImg
+                imageSource: "asset:///images/zerg_icon_white_200x200.png"
+		        horizontalAlignment: HorizontalAlignment.Center
+		        verticalAlignment: VerticalAlignment.Center
+            scalingMethod: ScalingMethod.Fill
+            loadEffect: ImageViewLoadEffect.FadeZoom
 
+        }
+	        function getImage(str){
+	            var image = "";
+	            if ( str == "P")
+	                return "asset:///images/protoss_icon_white_200x200.png";
+	            else if (str == "Z")
+	                return "asset:///images/zerg_icon_white_200x200.png";
+	            else if ( str == "T"){
+	                return"asset:///images/terran_icon_white_200x200.png";
+	            }
+	        }
+	    
+	 }
+}

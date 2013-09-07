@@ -12,11 +12,6 @@ TabbedPane{
         }
     ]
     
-    onCreationCompleted: {
-        
-        // Create the app menu for the cookbook.
-        menu = sc2castmenu.createObject();
-    }
     tabs: [
         Tab{
             content:CategoryList{
@@ -39,4 +34,25 @@ TabbedPane{
     ]
     showTabsOnActionBar: true
     sidebarState: SidebarState.VisibleFull
+    
+    onCreationCompleted: {
+        menu = sc2castmenu.createObject();
+        Application.thumbnail.connect(onThumbnail)  
+    }
+    function onThumbnail() {
+        _activeFrame.update(getImage(_store.get("activeFrameChooserObjectName","T")));
+    }
+    
+    function getImage(str){
+        var image = "";
+        
+        if ( str == "P")
+            return "asset:///images/protoss_icon_white_200x200.png";
+        else if (str == "Z")
+            return "asset:///images/zerg_icon_white_200x200.png";
+        else if ( str == "T"){
+            return "asset:///images/terran_icon_white_200x200.png";
+        }
+    }
+    
 }

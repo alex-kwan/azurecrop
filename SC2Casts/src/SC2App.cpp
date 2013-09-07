@@ -7,7 +7,7 @@
 #include <bb/cascades/Container>
 #include <bb/device/DisplayInfo>
 #include "SC2DynamicCover.h"
-
+#include "ActiveFrameQML.h"
 using namespace bb::device;
 using namespace bb::cascades;
 
@@ -23,19 +23,17 @@ SC2App::SC2App(bb::cascades::Application *app)
 	//Application::instance()->setCover(activeFrame);
 
     QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
-    qml->setContextProperty("_store", this);
-  //  qml->setContextProperty("activeFrame", activeFrame);
-    // create root object for the UI
-    AbstractPane *root = qml->createRootObject<AbstractPane>();
 
-    QmlDocument *qmlCover = QmlDocument::create("asset:///AppCover.qml").parent(this);
-    if( !qmlCover->hasErrors()){
-    	Container *coverContainer = qmlCover->createRootObject<Container>();
-    	SceneCover *sceneCover = SceneCover::create().content(coverContainer);
-    	Application::instance()->setCover(sceneCover);
+    ActiveFrameQML *activeFrame = new ActiveFrameQML();
+	Application::instance()->setCover(activeFrame);
+
+	qml->setContextProperty("_store", this);
+	qml->setContextProperty("_activeFrame", activeFrame);
+
+	AbstractPane *root = qml->createRootObject<AbstractPane>();
+	app->setScene(root);
     }
-    app->setScene(root);
-}
+
 
 QString SC2App::get(const QString &objectName, const QString &defaultValue)
 {

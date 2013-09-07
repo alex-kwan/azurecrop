@@ -2,9 +2,7 @@ import bb.cascades 1.0
 Page{
    
    attachedObjects:[
-       NetworkDialog{
-           id: network
-       }
+     
    ]
     property variant navPane
     property alias title: titlebar.title

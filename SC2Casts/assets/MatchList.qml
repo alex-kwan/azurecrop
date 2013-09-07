@@ -1,4 +1,5 @@
 import bb.cascades 1.0
+import bb.system 1.0
 Container {
     
     attachedObjects: [
@@ -81,7 +82,7 @@ Container {
         onTriggered: {
             var chosenItem = dataModel.data(indexPath);
             
-           
+            var onWifi = true;
             var data = chosenItem.url;
             if (page != null) {
                 delete page;
@@ -94,11 +95,13 @@ Container {
                 page = gameView.createObject();
                 page.navPane = nav;
                 page.title = chosenItem.title;
-                page.url = createURL(data, true);
-                
-                
+                page.url = createURL(data, onWifi);
             }
             nav.push(page);
+            if( onWifi == false ) {
+                dialog.show();
+            }
+           
         
         }
 

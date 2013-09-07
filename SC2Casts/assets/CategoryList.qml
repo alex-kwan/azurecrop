@@ -5,14 +5,30 @@ NavigationPane{
     property alias gamemodel : gamelist.dataSrc
     id : nav
     Page {
-        GamesList{
-            id:gamelist
-            nav : nav
-        
+        content: Container{
+            layout:StackLayout {
+            
+            }
+            
+                GamesList{
+                    id:gamelist
+                    nav : nav
+                
+                }
+                
+              
+            TextField {
+                id:filterSearch
+                inputMode: TextFieldInputMode.Text
+                autoFit: TextAutoFit.FitToBounds
+            
+            }
         }
-        titleBar: TitleBar {
-            id : titlebar
-            title: "Top Games"
+            titleBar: TitleBar {
+                id : titlebar
+                title: "Top Games"
+            } 
         }
-    }
+      
+    
 }

@@ -3,26 +3,38 @@ BASEDIR =  $$quote($$_PRO_FILE_PWD_)
 
 device {
     CONFIG(debug, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/SC2App.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/ActiveFrameQML.cpp) \
+                 $$quote($$BASEDIR/src/SC2App.cpp) \
+                 $$quote($$BASEDIR/src/SC2DynamicCover.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/SC2App.hpp)
+        HEADERS +=  $$quote($$BASEDIR/src/ActiveFrameQML.h) \
+                 $$quote($$BASEDIR/src/SC2App.hpp) \
+                 $$quote($$BASEDIR/src/SC2DynamicCover.h)
     }
 
     CONFIG(release, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/SC2App.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/ActiveFrameQML.cpp) \
+                 $$quote($$BASEDIR/src/SC2App.cpp) \
+                 $$quote($$BASEDIR/src/SC2DynamicCover.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/SC2App.hpp)
+        HEADERS +=  $$quote($$BASEDIR/src/ActiveFrameQML.h) \
+                 $$quote($$BASEDIR/src/SC2App.hpp) \
+                 $$quote($$BASEDIR/src/SC2DynamicCover.h)
     }
 }
 
 simulator {
     CONFIG(debug, debug|release) {
-        SOURCES +=  $$quote($$BASEDIR/src/SC2App.cpp) \
+        SOURCES +=  $$quote($$BASEDIR/src/ActiveFrameQML.cpp) \
+                 $$quote($$BASEDIR/src/SC2App.cpp) \
+                 $$quote($$BASEDIR/src/SC2DynamicCover.cpp) \
                  $$quote($$BASEDIR/src/main.cpp)
 
-        HEADERS +=  $$quote($$BASEDIR/src/SC2App.hpp)
+        HEADERS +=  $$quote($$BASEDIR/src/ActiveFrameQML.h) \
+                 $$quote($$BASEDIR/src/SC2App.hpp) \
+                 $$quote($$BASEDIR/src/SC2DynamicCover.h)
     }
 }
 
