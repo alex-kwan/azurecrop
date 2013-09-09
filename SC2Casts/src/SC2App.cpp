@@ -7,9 +7,11 @@
 #include <bb/cascades/Container>
 #include <bb/device/DisplayInfo>
 #include "SC2DynamicCover.h"
+#include <bb/system/InvokeRequest>
 #include "ActiveFrameQML.h"
 using namespace bb::device;
 using namespace bb::cascades;
+using namespace bb::system;
 
 SC2App::SC2App(bb::cascades::Application *app)
 : QObject(app)
@@ -27,7 +29,7 @@ SC2App::SC2App(bb::cascades::Application *app)
     ActiveFrameQML *activeFrame = new ActiveFrameQML();
 	Application::instance()->setCover(activeFrame);
 
-	qml->setContextProperty("_store", this);
+	qml->setContextProperty("_app", this);
 	qml->setContextProperty("_activeFrame", activeFrame);
 
 	AbstractPane *root = qml->createRootObject<AbstractPane>();
@@ -54,4 +56,52 @@ void SC2App::set(const QString &objectName, const QString &inputValue)
     QSettings settings;
     settings.setValue(objectName, QVariant(inputValue));
 }
+
+bool SC2App::onWifiConnection(){
+	QNetworkConfigurationManager netMgr;
+	QList<QNetworkConfiguration> mNetList = netMgr.allConfigurations(
+	        QNetworkConfiguration::Active);
+	QString wlan = "WLAN";
+		for(int i = 0; i < mNetList.size(); i++){
+			if (mNetList.at(i).bearerName().compare(wlan) == 0 ){
+				return true;
+			}
+		}
+		return false;
+}
+bool SC2App::isNetworkAvailable() {
+QNetworkConfigurationManager netMgr;
+QList<QNetworkConfiguration> mNetList = netMgr.allConfigurations(
+        QNetworkConfiguration::Active);
+	bool activeInterface = mNetList.count();
+	return activeInterface;
+}
+
+void SC2App::invoke(const QString &target, const QString &action,
+                   const QString &mimetype, const QString &uri) {
+           // Create a new invocation request
+           InvokeRequest request;
+
+           request.setTarget(target);
+           request.setAction(action);
+
+           if (target == QLatin1String("com.rim.bb.app.facebook")) {
+                   QVariantMap payload;
+
+                   if (!uri.isEmpty()) {
+                           payload["object_type"] = mimetype;
+                           payload["object_id"] = uri;
+                   } else {
+                           // Open the BlackBerry North America page by default
+                           payload["object_type"] = "page";
+                           payload["object_id"] = "328506290597521";
+                   }
+
+                   request.setMetadata(payload);
+           } else {
+                   request.setUri(uri);
+           }
+
+           m_invokeManager->invoke(request);
+   }
 

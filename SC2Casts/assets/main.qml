@@ -40,7 +40,7 @@ TabbedPane{
         Application.thumbnail.connect(onThumbnail)  
     }
     function onThumbnail() {
-        _activeFrame.update(getImage(_store.get("activeFrameChooserObjectName","T")));
+        _activeFrame.update(getImage(_app.get("activeFrameChooserObjectName","T")));
     }
     
     function getImage(str){

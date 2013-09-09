@@ -3,7 +3,11 @@ import bb.system 1.0
 Container {
     
     attachedObjects: [
-        
+   
+    	ComponentDefinition{
+    	    id:networkDialog
+    	    source: "NetworkRequiredDialog.qml"
+    	},
         ComponentDefinition {
             id: gameNotPlayed
             source: "NotPlayed.qml"
@@ -81,41 +85,48 @@ Container {
         
         onTriggered: {
             var chosenItem = dataModel.data(indexPath);
-            
-            var onWifi = true;
+            var b = !_app.onWifiConnection();
+            console.log(b);
             var data = chosenItem.url;
             if (page != null) {
                 delete page;
             }
-            if (data == "not played") {
-                page = gameNotPlayed.createObject();
-                page.title = chosenItem.title
-               
-            } else {
-                page = gameView.createObject();
-                page.navPane = nav;
-                page.title = chosenItem.title;
-                page.url = createURL(data, onWifi);
+            var actual = isWifiActive() || isMobileDataCheck();
+            console.log('this is actual ' +actual);
+            if ( isWifiActive() || !isMobileDataCheck()){
+                console.log("LOADING!!!");
+                if (data == "not played") {
+                    page = gameNotPlayed.createObject();
+                    page.title = chosenItem.title 
+                } else {
+                    page = gameView.createObject();
+                    page.navPane = nav;
+                    page.title = chosenItem.title;
+                    page.url = createURL(data);
+                }
+                nav.push(page);
             }
-            nav.push(page);
-            if( onWifi == false ) {
-                dialog.show();
+            else {
+                page = networkDialog.createObject();
+                page.open();
             }
-           
-        
         }
 
         minWidth: 720
         maxWidth: 1280
         horizontalAlignment: HorizontalAlignment.Fill
-        function createURL(str, onMobileData) {
-	        var url = 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0';
-	        if( onMobileData == true ){
-	        	url += '&autoplay=1';
-	        }
-            return url
+        function createURL(str) {
+            return 'http://www.youtube.com/embed/' + str + '?rel=0&controls=0&autoplay=1';
         }
     
+    }
+    function isWifiActive(){
+        console.log("Wifi - "+ _app.onWifiConnection());
+        return _app.onWifiConnection();
+    }
+    function isMobileDataCheck(){
+        console.log("Mobile check = " + _app.get("alertToggleObjectName", true));
+        return !_app.get("alertToggleObjectName", true);
     }
     
 }

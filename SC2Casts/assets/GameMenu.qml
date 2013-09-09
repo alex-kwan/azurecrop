@@ -10,14 +10,14 @@ MenuDefinition {
             settings.open();
         }
     }
-    helpAction: HelpActionItem {
-        onTriggered: {
-            if ( _store.get("alertToggleObjectName",true) == true){
-                console.log( "This is the current value " + _store.get("alertToggleObjectName",true));
-            	dialog.show();
-            }
-        }
-    }
+//    helpAction: HelpActionItem {
+//        onTriggered: {
+//            if ( _app.get("alertToggleObjectName",true) == true){
+//                console.log( "This is the current value " + _app.get("alertToggleObjectName",true));
+//            	dialog.show();
+//            }
+//        }
+//    }
     
     attachedObjects: [
         Settings{

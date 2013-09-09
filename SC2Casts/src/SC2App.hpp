@@ -3,8 +3,21 @@
 #define ApplicationUI_HPP_
 
 #include <QObject>
+ #include <bb/system/InvokeManager>
 
-namespace bb { namespace cascades { class Application; }}
+namespace bb{
+	namespace cascades {
+		class Application;
+	}
+}
+
+
+namespace bb{
+	namespace system {
+		class InvokeManager;
+	}
+}
+
 
 /*!
  * @brief Application pane object
@@ -22,6 +35,18 @@ public:
 	QString get(const QString &objectName, const QString &defaultValue);
 	Q_INVOKABLE
 	void set(const QString &objectName, const QString &inputValue);
+	Q_INVOKABLE
+	bool isNetworkAvailable();
+	Q_INVOKABLE
+	bool onWifiConnection();
+
+
+public Q_SLOTS:
+	void invoke(const QString &target, const QString &action,
+	                    const QString &mimetype, const QString &uri);
+
+private:
+	bb::system::InvokeManager* m_invokeManager;
 };
 
 

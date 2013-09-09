@@ -1,5 +1,8 @@
 import bb.cascades 1.0
 Sheet {
+    onOpened: {
+        alertToggleID.checked = _app.get("alertToggleObjectName", true);
+    }
     attachedObjects:[
     ]
     id:settingssheet
@@ -27,20 +30,20 @@ Sheet {
                     leftMargin: 50
                     id: networkWarningTitle
                     
-                    text: "Alert when viewing games	on Mobile Data"
+                    text: "Don't display alert when viewing games on Mobile Data"
                     multiline: true
                     autoSize.maxLineCount: 5
                     verticalAlignment: VerticalAlignment.Center
                 }//Label
-                ToggleButton {
+                CheckBox {
                     id:alertToggleID
                     objectName: "alertToggleObjectName"
-                    checked: _store.get("alertToggleObjectName", false);
+                    checked: _app.get("alertToggleObjectName", false);
                     horizontalAlignment: HorizontalAlignment.Right
                     onCheckedChanged: {
-                        _store.set("alertToggleObjectName", checked);
-                        console.log("The value of this setting is "+ checked);
+                        _app.set("alertToggleObjectName", alertToggleID.checked);
                     }
+                    
 
                 }//ToggleButton
             }//Container
@@ -92,22 +95,22 @@ Sheet {
                     onSelectedValueChanged: {
                         console.log("SelectedValue was changed to " + selectedValue);
                         activeFramePreview.choice = selectedValue;
-                        _store.set("activeFrameChooserObjectName", selectedValue);
+                        _app.set("activeFrameChooserObjectName", selectedValue);
                     }
                     Option{
                         text:"Protoss"
                         value:"P"
-                        selected: _store.get("activeFrameChooserObjectName",null) == "P"
+                        selected: _app.get("activeFrameChooserObjectName",null) == "P"
                     }//Option
                     Option{
                         text:"Zerg"
                         value:"Z"
-                        selected: _store.get("activeFrameChooserObjectName",null) == "Z"
+                        selected: _app.get("activeFrameChooserObjectName",null) == "Z"
                     }//Option
                     Option{
                         text:"Terran"
                         value:"T"
-                        selected: _store.get("activeFrameChooserObjectName",null) == "T"
+                        selected: _app.get("activeFrameChooserObjectName",null) == "T"
                     }//Option
                 }//DropDown
             }//Container   

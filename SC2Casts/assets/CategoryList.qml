@@ -12,23 +12,21 @@ NavigationPane{
             
                 GamesList{
                     id:gamelist
+                    
                     nav : nav
                 
                 }
                 
-              
-            TextField {
-                id:filterSearch
-                inputMode: TextFieldInputMode.Text
-                autoFit: TextAutoFit.FitToBounds
-            
-            }
         }
             titleBar: TitleBar {
                 id : titlebar
                 title: "Top Games"
+            }
+            onCreationCompleted: {
+                gamelist.searchText = "";
             } 
         }
+    
       
     
 }
