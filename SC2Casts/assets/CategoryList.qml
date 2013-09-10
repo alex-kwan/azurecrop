@@ -22,9 +22,6 @@ NavigationPane{
                 id : titlebar
                 title: "Top Games"
             }
-            onCreationCompleted: {
-                gamelist.searchText = "";
-            } 
         }
     
       

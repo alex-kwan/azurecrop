@@ -47,12 +47,12 @@ Dialog {
                     id:checkBoxToggle
                     checked: true
                     onCheckedChanged: {
-                        _app.set("alertToggleObjectName", checkBoxToggle.checked);
+                        _app.set("alertToggleObjectName", checkBoxToggle.checked?"true":"false");
                     }
                     horizontalAlignment: HorizontalAlignment.Right
                     verticalAlignment: VerticalAlignment.Top
                     onCreationCompleted: {
-                        checkBoxToggle.checked = _app.get("alertToggleObjectName", true);
+                        checkBoxToggle.checked = _app.get("alertToggleObjectName","true") == "true"? true: false;
                     }
                 }
 

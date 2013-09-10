@@ -73,7 +73,7 @@ bool SC2App::isNetworkAvailable() {
 QNetworkConfigurationManager netMgr;
 QList<QNetworkConfiguration> mNetList = netMgr.allConfigurations(
         QNetworkConfiguration::Active);
-	bool activeInterface = mNetList.count();
+	bool activeInterface = mNetList.count() > 0;
 	return activeInterface;
 }
 

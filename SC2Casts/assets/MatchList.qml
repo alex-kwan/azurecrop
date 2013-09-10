@@ -85,16 +85,16 @@ Container {
         
         onTriggered: {
             var chosenItem = dataModel.data(indexPath);
-            var b = !_app.onWifiConnection();
-            console.log(b);
+          
             var data = chosenItem.url;
             if (page != null) {
                 delete page;
             }
-            var actual = isWifiActive() || isMobileDataCheck();
-            console.log('this is actual ' +actual);
-            if ( isWifiActive() || !isMobileDataCheck()){
-                console.log("LOADING!!!");
+            var b = isMobileDataCheckNotSet();
+            var connection = isWifiActive() || _app.get("alertToggleObjectName", "true") == "true";
+            console.log('connection = '+connection + " wifi = " + isWifiActive() + " toggleSets = "+ _app.get("alertToggleObjectName", "true") == "true");
+            if ( connection ){
+                console.log('this will run if connction was true');
                 if (data == "not played") {
                     page = gameNotPlayed.createObject();
                     page.title = chosenItem.title 
@@ -106,7 +106,8 @@ Container {
                 }
                 nav.push(page);
             }
-            else {
+            else if( connection == false) {
+                console.log('this will run if connction was false');
                 page = networkDialog.createObject();
                 page.open();
             }
@@ -120,13 +121,14 @@ Container {
         }
     
     }
+    
     function isWifiActive(){
         console.log("Wifi - "+ _app.onWifiConnection());
         return _app.onWifiConnection();
     }
-    function isMobileDataCheck(){
-        console.log("Mobile check = " + _app.get("alertToggleObjectName", true));
-        return !_app.get("alertToggleObjectName", true);
+    function isMobileDataCheckNotSet(){
+        console.log("Mobile check = " + _app.get("alertToggleObjectName", "true"));
+        return !_app.get("alertToggleObjectName", "true") == "true"?true:false;
     }
     
 }

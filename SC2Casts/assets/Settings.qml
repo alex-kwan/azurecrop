@@ -1,7 +1,7 @@
 import bb.cascades 1.0
 Sheet {
     onOpened: {
-        alertToggleID.checked = _app.get("alertToggleObjectName", true);
+        alertToggleID.checked = _app.get("alertToggleObjectName", "true")=="true"?true:false;
     }
     attachedObjects:[
     ]
@@ -38,10 +38,10 @@ Sheet {
                 CheckBox {
                     id:alertToggleID
                     objectName: "alertToggleObjectName"
-                    checked: _app.get("alertToggleObjectName", false);
+                    checked: _app.get("alertToggleObjectName", "true")?true:false;
                     horizontalAlignment: HorizontalAlignment.Right
                     onCheckedChanged: {
-                        _app.set("alertToggleObjectName", alertToggleID.checked);
+                        _app.set("alertToggleObjectName", alertToggleID.checked ? "true" : "false");
                     }
                     
 
@@ -93,7 +93,6 @@ Sheet {
                     objectName:"activeFrameChooserObjectName"
                     horizontalAlignment: HorizontalAlignment.Right
                     onSelectedValueChanged: {
-                        console.log("SelectedValue was changed to " + selectedValue);
                         activeFramePreview.choice = selectedValue;
                         _app.set("activeFrameChooserObjectName", selectedValue);
                     }
