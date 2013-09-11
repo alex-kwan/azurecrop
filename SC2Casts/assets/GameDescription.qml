@@ -48,12 +48,14 @@ Container{
             verticalAlignment: VerticalAlignment.Top
             preferredWidth: 300
             preferredHeight:100
+            topMargin: 33.0
+            translationX:60
 
         }
         
         Label {
             id: title
-            text: "Scarlett vs Jaedong"
+            text: "Scarlett vs JaedongJaedongJaedongJaedongJaedong"
             multiline: true
             textStyle{
                 base: tsd.style
@@ -95,16 +97,15 @@ Container{
         
         Label{
             id :casters
-            preferredWidth: 300
-            text: "Day9 and Husky"
+            text: "Day9 and HuskyHuskyHusky"
             textStyle.color: Color.White
             textStyle.fontSizeValue: 8
             horizontalAlignment: HorizontalAlignment.Right
             verticalAlignment: VerticalAlignment.Bottom
             multiline: true
-            translationX: 50.0
             textStyle.fontWeight: FontWeight.Normal
             textStyle.fontSize: FontSize.Small
+            maxWidth: 300.0
         }
         
     }

@@ -38,7 +38,7 @@ Sheet {
                 CheckBox {
                     id:alertToggleID
                     objectName: "alertToggleObjectName"
-                    checked: _app.get("alertToggleObjectName", "true")?true:false;
+                    checked: _app.get("alertToggleObjectName","true")?true:false;
                     horizontalAlignment: HorizontalAlignment.Right
                     onCheckedChanged: {
                         _app.set("alertToggleObjectName", alertToggleID.checked ? "true" : "false");

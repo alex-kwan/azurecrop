@@ -3,10 +3,13 @@ import bb.system 1.0
 Container {
     
     attachedObjects: [
-   
+        ComponentDefinition{
+            id:networkRequiredDialog
+            source: "NetworkRequiredDialog.qml"
+        },
     	ComponentDefinition{
-    	    id:networkDialog
-    	    source: "NetworkRequiredDialog.qml"
+    	    id:wifiRequiredDialog
+    	    source: "WifiRequiredDialog.qml"
     	},
         ComponentDefinition {
             id: gameNotPlayed
@@ -90,11 +93,13 @@ Container {
             if (page != null) {
                 delete page;
             }
-            var b = isMobileDataCheckNotSet();
+            if ( !doesNetworkExist()){
+                page = networkRequiredDialog.createObject();
+                page.open();
+                return;
+            }
             var connection = isWifiActive() || _app.get("alertToggleObjectName", "true") == "true";
-            console.log('connection = '+connection + " wifi = " + isWifiActive() + " toggleSets = "+ _app.get("alertToggleObjectName", "true") == "true");
-            if ( connection ){
-                console.log('this will run if connction was true');
+            if ( connection ){	
                 if (data == "not played") {
                     page = gameNotPlayed.createObject();
                     page.title = chosenItem.title 
@@ -105,11 +110,12 @@ Container {
                     page.url = createURL(data);
                 }
                 nav.push(page);
+                return;
             }
             else if( connection == false) {
-                console.log('this will run if connction was false');
-                page = networkDialog.createObject();
+            	page = wifiRequiredDialog.createObject();
                 page.open();
+                return;
             }
         }
 
@@ -121,7 +127,11 @@ Container {
         }
     
     }
-    
+
+    function doesNetworkExist(){
+        console.log("Network - " +_app.isNetworkAvailable());
+        return _app.isNetworkAvailable();
+    }
     function isWifiActive(){
         console.log("Wifi - "+ _app.onWifiConnection());
         return _app.onWifiConnection();

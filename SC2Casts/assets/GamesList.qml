@@ -3,7 +3,6 @@ import bb.cascades 1.0
 
 ListView {
     
-    
     property variant dataSrc
     property variant nav
     
@@ -61,7 +60,7 @@ ListView {
                 race2: ListItemData.race2
                 casters: {
                     var beg = ListItemData.description.indexOf(":")+1;
-                    var end = ListItemData.description.indexOf("-");
+                    var end = ListItemData.description.lastIndexOf("-");
                     return ListItemData.description.substring(beg,end);
                 }
             }
@@ -80,7 +79,6 @@ ListView {
         page.additional = getAdditionalInfo(chosenItem.description);
         nav.push(page); 
     }
-    
     function getMatchInfo(str){
         var desc = str
         var end = str.indexOf("/");
@@ -88,12 +86,12 @@ ListView {
     }
     function getCasters(str){
         var beg = str.indexOf(":")+1;
-        var end = str.indexOf("-");
+        var end = str.lastIndexOf("-");
         return str.substring(beg,end);
     }
     
     function getAdditionalInfo(str){
-        var beg = str.indexOf("-")+1;
+        var beg = str.lastIndexOf("-")+1;
         return str.substring(beg);
     }
 }

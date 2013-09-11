@@ -21,12 +21,12 @@ Dialog {
 	        topPadding:20
 	        leftPadding:20
 	        rightPadding:20
-            maxHeight: 600
+            maxHeight: 500
             horizontalAlignment: HorizontalAlignment.Center
             verticalAlignment: VerticalAlignment.Center
             background: Color.create("#aa2c2c2c")
             Label{
-	            text: qsTr("In order to view this game you will required a network connect to Wi-Fi or Cellular data to continue.")
+	            text: qsTr("In order to view this game there may be a significant amount of Mobile Data usage. We suggest you switch to Wi-Fi to proceed without incurring additional carrier costs.")
                 textStyle.color: Color.create("#ffffffff")
                 autoSize.maxLineCount: 6
                 multiline: true
@@ -37,6 +37,25 @@ Dialog {
                     
                 
                 }
+                Label{
+                    text:"Don't display again"
+                    horizontalAlignment: HorizontalAlignment.Left
+                    verticalAlignment: VerticalAlignment.Top
+                    textStyle.color: Color.create("#ffffffff")
+                }
+                CheckBox {
+                    id:checkBoxToggle
+                    checked: true
+                    onCheckedChanged: {
+                        _app.set("alertToggleObjectName", checkBoxToggle.checked?"true":"false");
+                    }
+                    horizontalAlignment: HorizontalAlignment.Right
+                    verticalAlignment: VerticalAlignment.Top
+                    onCreationCompleted: {
+                        checkBoxToggle.checked = _app.get("alertToggleObjectName","true") == "true"? true: false;
+                    }
+                }
+
             }
             Container{
                 layout:StackLayout{
@@ -50,10 +69,10 @@ Dialog {
                     }
                 }
                 Button{
-                    text:"Network Settings"
+                    text:"Wi-Fi Setting"
                     onClicked: {
                         dialog.close();
-                        _app.invoke("sys.settings.target", "bb.action.OPEN","settings/view","settings://networkconnections"  )
+                        _app.invoke("sys.settings.target", "bb.action.OPEN","settings/view","settings://wifi"  )
                     }
 
                 }

@@ -5,25 +5,22 @@ NavigationPane{
     property alias gamemodel : gamelist.dataSrc
     id : nav
     Page {
-        content: Container{
-            layout:StackLayout {
-            
+        content: Container {
+            layout: StackLayout {
+
             }
-            
-                GamesList{
-                    id:gamelist
-                    
-                    nav : nav
-                
-                }
-                
-        }
-            titleBar: TitleBar {
-                id : titlebar
-                title: "Top Games"
+
+            GamesList {
+                id: gamelist
+                nav: nav
+
             }
         }
-    
-      
-    
+        
+        titleBar: TitleBar {
+            id: titlebar
+            title: "Top Games"
+        }
+    }
+
 }

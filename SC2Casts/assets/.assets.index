@@ -1,5 +1,5 @@
 1
-47
+45
 0.jpg
 2.jpg
 720x720/AppBackground.qml
@@ -32,9 +32,6 @@ images/splash_landscape.png
 images/splash_portrait.png
 images/terran-icon.png
 images/terran_icon_white_200x200.png
-images/test0.jpg
-images/test1.jpg
-images/test2.jpg
 images/topgames_icon_60x60.png
 images/whitedog.png
 images/zerg-icon.png
@@ -47,3 +44,4 @@ NetworkRequiredDialog.qml
 NotPlayed.qml
 Settings.qml
 Versus.qml
+WifiRequiredDialog.qml
