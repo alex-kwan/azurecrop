@@ -3,8 +3,6 @@ Sheet {
     onOpened: {
         alertToggleID.checked = _app.get("alertToggleObjectName", "true")=="true"?true:false;
     }
-    attachedObjects:[
-    ]
     id:settingssheet
     content : Page{
         titleBar: TitleBar {

@@ -16,7 +16,8 @@ TabbedPane{
         Tab{
             content:CategoryList{
                 type: "Recent Games"
-                gamemodel: "asset:///models/recentgamedescriptions.xml";
+                gamemodel: "models/recentgamedescriptions.xml"
+                //gamemodel: "asset:///models/recentgamedescriptions.xml";
             }
             title: "Recent Games"
             imageSource: "asset:///images/1377631251_224360-folder-recent.png"
@@ -25,7 +26,8 @@ TabbedPane{
         Tab{
           content:CategoryList{
               type:"Top Games"
-              gamemodel: "asset:///models/topgamedescriptions.xml";
+              gamemodel: "models/topgamedescriptions.xml"
+              //gamemodel: "asset:///models/topgamedescriptions.xml";
           }
             title: "Top Games"
             imageSource: "asset:///images/1377631302_MB__Champions_League.png"

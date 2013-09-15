@@ -6,8 +6,11 @@
 #include <bb/cascades/SceneCover>
 #include <bb/cascades/Container>
 #include <bb/device/DisplayInfo>
+#include <bb/cascades/TextField>
+#include <bb/cascades/QListDataModel>
 #include "SC2DynamicCover.h"
 #include <bb/system/InvokeRequest>
+#include <bb/data/DataSource>
 #include "ActiveFrameQML.h"
 using namespace bb::device;
 using namespace bb::cascades;
@@ -20,7 +23,7 @@ SC2App::SC2App(bb::cascades::Application *app)
 	QCoreApplication::setApplicationName("Watcher of the Void");
     // create scene document from main.qml asset
     // set parent to created document to ensure it exists for the whole application lifetime
-
+	bb::data::DataSource::registerQmlTypes();
 //	SC2DynamicCover *activeFrame = new SC2DynamicCover();
 	//Application::instance()->setCover(activeFrame);
 
@@ -34,6 +37,7 @@ SC2App::SC2App(bb::cascades::Application *app)
 
 	AbstractPane *root = qml->createRootObject<AbstractPane>();
 	app->setScene(root);
+	_app = app;
     }
 
 
@@ -77,6 +81,42 @@ QList<QNetworkConfiguration> mNetList = netMgr.allConfigurations(
 	return activeInterface;
 }
 
+void SC2App::setupList(const QString& type){
+//	QmlDocument *qml = QmlDocument::create("asset:///main.qml").parent(this);
+//
+//	    // create root object for the UI
+//	    AbstractPane *root = qml->createRootObject<AbstractPane>();
+//	    // set created root object as a scene
+//	    _app->setScene(root);
+//
+//	    dupDtMdl = new QListDataModel<QString>();
+//
+//	    primaryDtMdl = new QListDataModel<QString>();
+//
+//	    primaryDtMdl->append("Alpha");
+//	    primaryDtMdl->append("Anthem");
+//	    primaryDtMdl->append("Antonio");
+//	    primaryDtMdl->append("Beta");
+//
+//	   TextField* txtFld = root->findChild<TextField*>("txtSrch");
+//	   lv = root->findChild<ListView*>("lstVw");
+//	   lv->setDataModel(primaryDtMdl);
+//
+//	    connect(txtFld,SIGNAL(textChanging(QString)),this,SLOT(filterDataModel(QString)));
+}
+void SC2App::filterDataModel(const QString &txt){
+//	dupDtMdl->clear();
+//	int length = primaryDtMdl-size();
+//	    for(int i =0; i<length; i++)
+//		   {
+//		      QString var = primaryDtMdl->value(i);
+//			  qDebug()<<var;
+//			  if(var.contains(txt, Qt::CaseInsensitive))
+//				  dupDtMdl->append(var);
+//		   }
+//
+//		   lv->setDataModel(dupDtMdl);
+}
 void SC2App::invoke(const QString &target, const QString &action,
                    const QString &mimetype, const QString &uri) {
            // Create a new invocation request

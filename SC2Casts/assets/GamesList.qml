@@ -1,25 +1,54 @@
 import bb.cascades 1.0
-
+import bb.data 1.0
 
 ListView {
     
+    property alias ascending : dataModel.sortedAscending
+    
+	onCreationCompleted: {
+     dataSource.load();
+ }    
     property variant dataSrc
     property variant nav
+    property variant searchText
+    property variant dataList
     
+   
     attachedObjects: [
         ComponentDefinition {
             id: gameDetail
             source: "GameDetailSheet.qml"
         }
+       ,
+        GroupDataModel { 
+            id: dataModel
+            sortingKeys: ["title"]
+            sortedAscending: true
+            grouping: ItemGrouping.None
+            
+       }
+        ,
+        DataSource {
+            id: dataSource
+            query: ""
+            type: DataSourceType.Xml
+            
+            onDataLoaded: {
+              // console.log("reloading!");
+                dataModel.clear();
+         //       console.log("theDataList -> "+data.listItem);
+                dataModel.insertList(data.listItem);
+                dataList = data.listItem
+            }
+            onError: {
+              //  console.log("I encounterd a data error ")
+            }
+            source: dataSrc
+        }
     ]
     
-    
-    dataModel: XmlDataModel {
-        
-        id: dataModel
-        source: dataSrc
-        
-    }
+    dataModel : dataModel
+
 
     listItemComponents: [
         ListItemComponent{
@@ -44,7 +73,7 @@ ListView {
           content: Container{}  
         },
         ListItemComponent {
-            type: "listItem"
+            type: "item"
             content: GameDescription {
                 preferredWidth: 1280
                 maxWidth:1280
@@ -71,8 +100,7 @@ ListView {
         var chosenItem = dataModel.data(index);
         var page = gameDetail.createObject();
         page.nav = nav
-        page.data = dataSrc
-        page.path = indexPath;
+        page.data = chosenItem
         page.title = chosenItem.title
         page.description = getMatchInfo(chosenItem.description);
         page.casters = getCasters(chosenItem.description)
@@ -94,6 +122,37 @@ ListView {
         var beg = str.lastIndexOf("-")+1;
         return str.substring(beg);
     }
+    function objStr( obj ) {
+        return JSON.stringify(obj);
+    }
+    
+    function sc2log( logName, logDesc){
+        return "["+logName+"]"+ " - "+ objStr(logDesc); 
+    }
+    onSearchTextChanged: {
+        var size = dataList.length;
+      
+        var i = 0;
+        var count = 0;
+        var games = new Array();
+        dataModel.clear();
+        for(i = 0; i < size; i++){
+            var title = dataList[i].title;
+            var desc = dataList[i].description;
+            if(stringContains(searchText.toLowerCase(), title, desc)){
+                dataModel.insert(dataList[i]);
+            }
+        }
+    }
+    function stringContains(str, title, desc){
+        if(str == ""){
+            return true;
+        }
+        var titleContains = ((title.toLowerCase()).indexOf(str)) != -1;
+        var descContains = ((desc.toLowerCase()).indexOf(str)) != -1;
+        return titleContains || descContains
+    }
+    
 }
 
  

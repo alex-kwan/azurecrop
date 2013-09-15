@@ -7,8 +7,7 @@ Page {
     property alias description: description.text
     property alias casters: casters.text
     property alias additional : additional.text
-    property alias path : matchList.path
-    property alias data : matchList.data
+    property alias data : matchList.gameData
     
     titleBar: TitleBar {
         id : titlebar
@@ -43,7 +42,6 @@ Page {
         }
         background: Color.Black
         MatchList{
-            data : "models/recentgamedescriptions.xml"
             id: matchList
             horizontalAlignment: HorizontalAlignment.Center
 

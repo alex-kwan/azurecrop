@@ -19,31 +19,49 @@ Container {
          	id: gameView
          	source: "GameView.qml"   
         }
+        
+        ,GroupDataModel{
+                    id: dataModel
+                    sortingKeys: ["title"]
+                    sortedAscending: true
+                    grouping: ItemGrouping.None
+        }
     ]
     
-    property alias data : dataModel.source
+    property variant gameData
     property variant page
     property variant nav
-    property alias path : view.rootIndexPath
     
     background: Color.Black
     layout:StackLayout{
         orientation: LayoutOrientation.TopToBottom
     }
+     
+    onGameDataChanged : {
+        //dataModel.insertList(data.game)
+        console.log("GameData -> " + JSON.stringify(gameData.game));
+        var size = gameData.game.length;
+        if( gameData.game.length == undefined ){
+            dataModel.insert(gameData.game)
+        }
+        else {
+            dataModel.insertList(gameData.game)
+        }
+//        console.log("the length is "+data.game.length);
+//        for( var i = 0; i < size; i++){
+//            dataModel.insert(data.game[i]);
+//        }
+        
+    }
 
     ListView{
+        
         id : view
-        rootIndexPath: [1]
-        dataModel: XmlDataModel {
-            id: dataModel
-            source: "models/recentgamedescriptions.xml"
-        }
-        
-        
+        dataModel: dataModel
         listItemComponents: [
           
             ListItemComponent {
-                type: "game"
+                type: "item"
                 
                 content: Container {
                     minWidth: 720
@@ -87,8 +105,9 @@ Container {
         ]
         
         onTriggered: {
-            var chosenItem = dataModel.data(indexPath);
-          
+            var chosenElement = (gameData.game.length == undefined ) ? gameData.game : gameData.game[indexPath];
+            var chosenItem = chosenElement
+            console.log(JSON.stringify(chosenItem));
             var data = chosenItem.url;
             if (page != null) {
                 delete page;
