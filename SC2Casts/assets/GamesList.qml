@@ -12,6 +12,7 @@ ListView {
     property variant nav
     property variant searchText
     property variant dataList
+    property variant indicator
     
    
     attachedObjects: [
@@ -26,8 +27,8 @@ ListView {
             sortedAscending: true
             grouping: ItemGrouping.None
             
-       }
-        ,
+       },
+       
         DataSource {
             id: dataSource
             query: ""
@@ -39,6 +40,7 @@ ListView {
          //       console.log("theDataList -> "+data.listItem);
                 dataModel.insertList(data.listItem);
                 dataList = data.listItem
+                myIndicator.stop();
             }
             onError: {
               //  console.log("I encounterd a data error ")
@@ -130,18 +132,27 @@ ListView {
         return "["+logName+"]"+ " - "+ objStr(logDesc); 
     }
     onSearchTextChanged: {
+        if(!myIndicator.running){
+    	   myIndicator.start();     
+    	}   
         var size = dataList.length;
       
         var i = 0;
         var count = 0;
         var games = new Array();
         dataModel.clear();
+        var empty = true;
         for(i = 0; i < size; i++){
             var title = dataList[i].title;
             var desc = dataList[i].description;
             if(stringContains(searchText.toLowerCase(), title, desc)){
                 dataModel.insert(dataList[i]);
+                empty = false;
             }
+        }
+        if( empty == true ){
+            dataModel.insert({"description":"", "race1":"", "race2":"", "title":"No matches matching \""+searchText+"\""});
+            myIndicator.stop();
         }
     }
     function stringContains(str, title, desc){

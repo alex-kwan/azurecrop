@@ -6,12 +6,19 @@ NavigationPane{
     id : nav
     Page {
         content: Container {
-            layout: StackLayout {
+            layout: DockLayout {
 
             }
-
+            ActivityIndicator {
+                
+                id: myIndicator
+                preferredWidth: 100
+                verticalAlignment: VerticalAlignment.Center
+                horizontalAlignment: HorizontalAlignment.Center
+            }
             GamesList {
                 id: gamelist
+                indicator: myIndicator
                 nav: nav
 
             }
@@ -24,6 +31,8 @@ NavigationPane{
                 onTextChanging: {
                     gamelist.searchText = text
                 }
+                verticalAlignment: VerticalAlignment.Bottom
+                hintText: "Search (player, caster, event)"
             }
         }
         
@@ -33,22 +42,22 @@ NavigationPane{
         }
         
       
-      actions: [
-          ActionItem{
-              title:"Ascending"
-              onTriggered: {
-                  gamelist.ascending = true;
-              }
-          }
-          ,
-          ActionItem{
-              title : "Descending"
-              onTriggered: {
-                  gamelist.ascending = false;
-              }
-          }
-          
-      ]
+//      actions: [
+//          ActionItem{
+//              title:"Ascending"
+//              onTriggered: {
+//                  gamelist.ascending = true;
+//              }
+//          }
+//          ,
+//          ActionItem{
+//              title : "Descending"
+//              onTriggered: {
+//                  gamelist.ascending = false;
+//              }
+//          }
+//          
+//      ]
     }
     
     

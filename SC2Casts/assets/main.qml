@@ -40,6 +40,12 @@ TabbedPane{
     onCreationCompleted: {
         menu = sc2castmenu.createObject();
         Application.thumbnail.connect(onThumbnail)  
+        if ( _app.get("activeFrameChooserObjectName","") == ""){
+        	_app.set("activeFrameChooserObjectName","T")
+        }
+        if ( _app.get("alertToggleObjectName","") == ""){
+        _app.set("alertToggleObjectName", "false");
+        }
     }
     function onThumbnail() {
         _activeFrame.update(getImage(_app.get("activeFrameChooserObjectName","T")));

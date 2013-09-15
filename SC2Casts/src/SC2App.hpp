@@ -46,20 +46,14 @@ public:
 	bool isNetworkAvailable();
 	Q_INVOKABLE
 	bool onWifiConnection();
-	Q_INVOKABLE
-	void setupList(const QString& type);
 
 
 public Q_SLOTS:
 	void invoke(const QString &target, const QString &action,
 	                    const QString &mimetype, const QString &uri);
-	void filterDataModel(const QString &txt);
 private:
-	bb::cascades::QListDataModel<QString>* dupDtMdl;
-	bb::cascades::QListDataModel<QString>* primaryDtMdl;
 	bb::system::InvokeManager* m_invokeManager;
 	bb::cascades::Application* _app;
-	bb::cascades::ListView* lv;
 };
 
 
