@@ -43,7 +43,7 @@ TabbedPane{
         if ( _app.get("activeFrameChooserObjectName","") == ""){
         	_app.set("activeFrameChooserObjectName","T")
         }
-        if ( _app.get("alertToggleObjectName","") == ""){
+        if ( _app.get("alertToggleObjectName","false") == "false"){
         _app.set("alertToggleObjectName", "false");
         }
     }

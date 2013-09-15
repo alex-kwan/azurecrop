@@ -37,6 +37,7 @@ SC2App::SC2App(bb::cascades::Application *app)
 	AbstractPane *root = qml->createRootObject<AbstractPane>();
 	app->setScene(root);
 	_app = app;
+	m_invokeManager = new InvokeManager(0);
     }
 
 

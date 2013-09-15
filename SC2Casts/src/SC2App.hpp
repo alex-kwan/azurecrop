@@ -49,8 +49,7 @@ public:
 
 
 public Q_SLOTS:
-	void invoke(const QString &target, const QString &action,
-	                    const QString &mimetype, const QString &uri);
+	void invoke(const QString &target, const QString &action,const QString &mimetype, const QString &uri);
 private:
 	bb::system::InvokeManager* m_invokeManager;
 	bb::cascades::Application* _app;

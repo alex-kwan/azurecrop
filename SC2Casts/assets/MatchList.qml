@@ -117,7 +117,7 @@ Container {
                 page.open();
                 return;
             }
-            var connection = isWifiActive() || _app.get("alertToggleObjectName", "true") == "true";
+            var connection = isWifiActive() || _app.get("alertToggleObjectName", "false") == "true";
             if ( connection ){	
                 if (data == "not played") {
                     page = gameNotPlayed.createObject();
@@ -156,8 +156,8 @@ Container {
         return _app.onWifiConnection();
     }
     function isMobileDataCheckNotSet(){
-        console.log("Mobile check = " + _app.get("alertToggleObjectName", "true"));
-        return !_app.get("alertToggleObjectName", "true") == "true"?true:false;
+        console.log("Mobile check = " + _app.get("alertToggleObjectName", "false"));
+        return !_app.get("alertToggleObjectName", "false") == "true"?true:false;
     }
     
 }

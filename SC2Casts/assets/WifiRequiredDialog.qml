@@ -52,7 +52,7 @@ Dialog {
                     horizontalAlignment: HorizontalAlignment.Right
                     verticalAlignment: VerticalAlignment.Top
                     onCreationCompleted: {
-                        checkBoxToggle.checked = _app.get("alertToggleObjectName","true") == "true"? true: false;
+                        checkBoxToggle.checked = _app.get("alertToggleObjectName","false") == "true"? true: false;
                     }
                 }
 
@@ -73,6 +73,7 @@ Dialog {
                     onClicked: {
                         dialog.close();
                         _app.invoke("sys.settings.target", "bb.action.OPEN","settings/view","settings://wifi"  )
+                    
                     }
 
                 }
