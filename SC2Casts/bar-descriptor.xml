@@ -67,9 +67,9 @@
     <!--  The category where the application appears. Either core.games or core.media. -->
     <category>core.games</category>
     <splashScreens>
-       <image>splash_landscape.png</image>
-       <image>splash_portrait.png</image>
-       <image>Q10_SPLASH.png</image>
+       <image>Q10_SPLASH_a.png</image>
+       <image>splash_portrait_a.png</image>
+       <image>landscape_d.png</image>
     </splashScreens>
     <configuration name="Device-Debug">
        <platformArchitecture>armle-v7</platformArchitecture>
@@ -102,9 +102,13 @@
         <include name="*.qm"/>
     </asset>
     <asset path="assets/images/iconz.png">iconz.png</asset>
-    <asset path="assets/images/splash_landscape.png">splash_landscape.png</asset>
     <asset path="assets/images/splash_portrait.png">splash_portrait.png</asset>
-    <asset path="assets/images/Q10_SPLASH.png">Q10_SPLASH.png</asset>
+    <asset path="assets/images/Q10_SPLASH_a.png">Q10_SPLASH_a.png</asset>
+    <asset path="assets/images/splash_landscape_a.png">splash_landscape_a.png</asset>
+    <asset path="assets/images/splash_portrait_a.png">splash_portrait_a.png</asset>
+    <asset path="assets/images/splash_landscape_b.png">splash_landscape_b.png</asset>
+    <asset path="assets/images/landscape_c.png">landscape_c.png</asset>
+    <asset path="assets/images/landscape_d.png">landscape_d.png</asset>
     
     <!-- Request permission to execute native code.  Required for native applications. -->
     <permission system="true">run_native</permission>
