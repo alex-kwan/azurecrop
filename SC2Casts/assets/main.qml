@@ -15,21 +15,21 @@ TabbedPane{
     tabs: [
         Tab{
             content:CategoryList{
-                type: "Recent Games"
+                type: qsTr("Recent Games")
                 gamemodel: "models/recentgamedescriptions.xml"
                 //gamemodel: "asset:///models/recentgamedescriptions.xml";
             }
-            title: "Recent Games"
+            title: qsTr("Recent Games")
             imageSource: "asset:///images/1377631251_224360-folder-recent.png"
             //   s   imageSource: "asset:///images/recentgames_icon_60x60.png"
         },
         Tab{
           content:CategoryList{
-              type:"Top Games"
+              type:qsTr("Top Games")
               gamemodel: "models/topgamedescriptions.xml"
               //gamemodel: "asset:///models/topgamedescriptions.xml";
           }
-            title: "Top Games"
+          title: qsTr("Top Games")
             imageSource: "asset:///images/1377631302_MB__Champions_League.png"
             //  imageSource: "asset:///images/protoss-icon.png"
         }

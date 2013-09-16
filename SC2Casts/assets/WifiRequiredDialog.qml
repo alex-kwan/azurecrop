@@ -38,7 +38,7 @@ Dialog {
                 
                 }
                 Label{
-                    text:"Don't display again"
+                    text:qsTr("Don't display again")
                     horizontalAlignment: HorizontalAlignment.Left
                     verticalAlignment: VerticalAlignment.Top
                     textStyle.color: Color.create("#ffffffff")
@@ -63,13 +63,13 @@ Dialog {
 
                 }
                 Button{
-                    text:"Cancel"
+                    text:qsTr("Cancel")
                     onClicked: {
                         dialog.close()
                     }
                 }
                 Button{
-                    text:"Wi-Fi Setting"
+                    text:qsTr("Wi-Fi Setting")
                     onClicked: {
                         dialog.close();
                         _app.invoke("sys.settings.target", "bb.action.OPEN","settings/view","settings://wifi"  )

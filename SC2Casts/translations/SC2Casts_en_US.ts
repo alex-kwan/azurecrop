@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="en_US">
 <context>
     <name>NetworkRequiredDialog</name>
     <message>
@@ -72,11 +72,6 @@
 </context>
 <context>
     <name>main</name>
-    <message>
-        <location filename="../assets/main.qml" line="25"/>
-        <source></source>
-        <translation></translation>
-    </message>
     <message>
         <location filename="../assets/main.qml" line="18"/>
         <location filename="../assets/main.qml" line="22"/>

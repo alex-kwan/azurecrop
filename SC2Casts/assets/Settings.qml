@@ -6,9 +6,9 @@ Sheet {
     id:settingssheet
     content : Page{
         titleBar: TitleBar {
-            title: "Settings"
+            title: qsTr("Settings")
             dismissAction: ActionItem {
-                title: "Back"
+            title: qsTr("Back")
                 ActionBar.placement: ActionBarPlacement.OnBar
                 onTriggered: {settingssheet.close();}
             }//dismissAction
@@ -28,7 +28,7 @@ Sheet {
                     leftMargin: 50
                     id: networkWarningTitle
                     
-                    text: "Don't display alert when viewing games on Mobile Data"
+                    text: qsTr("Don't display alert when viewing games on Mobile Data")
                     multiline: true
                     autoSize.maxLineCount: 5
                     verticalAlignment: VerticalAlignment.Center
@@ -55,7 +55,7 @@ Sheet {
 	            layout:DockLayout{}
                 horizontalAlignment: HorizontalAlignment.Fill
                 Label{
-	                text: "Active Frame Preview"
+                    text: qsTr("Active Frame Preview")
                     horizontalAlignment: HorizontalAlignment.Left
                     verticalAlignment: VerticalAlignment.Center
                 }//Label
@@ -80,7 +80,7 @@ Sheet {
 	                maxWidth: 500
 	                leftMargin: 50
 	    	        id: favoriteRace
-	    	        text: "Active Frame Race"
+                    text: qsTr("Active Frame Race")
 	                multiline: true
 	                autoSize.maxLineCount: 5
                     horizontalAlignment: HorizontalAlignment.Left

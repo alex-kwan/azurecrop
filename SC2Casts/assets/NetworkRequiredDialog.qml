@@ -44,13 +44,13 @@ Dialog {
 
                 }
                 Button{
-                    text:"Cancel"
+                    text:qsTr("Cancel")
                     onClicked: {
                         dialog.close()
                     }
                 }
                 Button{
-                    text:"Network Settings"
+                    text:qsTr("Network Settings")
                     onClicked: {
                         dialog.close();
                         _app.invoke("sys.settings.target", "bb.action.OPEN","settings/view","settings://networkconnections"  )
